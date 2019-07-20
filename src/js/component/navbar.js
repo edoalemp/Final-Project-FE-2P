@@ -4,14 +4,22 @@ import { Link } from "react-router-dom";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-light bg-light mb-3">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
+			<nav className="navbar navbar-expand-lg navbar-light bg-dark">
+				<div className="dropdown">
+					<button className="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+						<i className="fas fa-grip-lines" />
+					</button>
+					<div className="dropdown-menu">
+						<Link className="dropdown-item" to="/estaciones">
+							Estaciones
+						</Link>
+						<Link className="dropdown-item" to="/mediciones">
+							Mediciones
+						</Link>
+						<Link className="dropdown-item" to="/mediciones">
+							Usuario
+						</Link>
+					</div>
 				</div>
 			</nav>
 		);

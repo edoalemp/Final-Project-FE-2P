@@ -1,0 +1,27 @@
+.menuvista1{
+  position: relative; top: 50%; transform: translateY(8%) translateX(30%); width: 100%;}
+.containervista1{
+  position: relative; top: 50%; transform: translateY(10%) translateX(39%); width: 100%;}
+.image{
+  position: relative; top: 50%; transform: translateY(10%) translateX(100%); width: 25%;}
+#modificar{
+  position: relative; top: 50%; transform: translateY(10%) translateX(35%); width: 100%;}
+.containervista2{
+  position: relative; top: 50%; transform: translateY(10%) translateX(0%); width: 100%;}
+img{
+    width: 500px;
+    height: 300px;
+    position: relative; top: 50%; transform: translateY(0%) translateX(35%); width: 100%;}
+  }
+.menuvista5{
+  position: relative; top: 50%; transform: translateY(10%) translateX(60%); width: 100%;}
+#contenedor_principal{
+  position: relative; top: 50%; transform: translateY(10%) translateX(40%); width: 100%;}
+#variables{
+  position: relative; transform: translateX(10%);}
+#estaciones{
+  position: relative; transform: translateX(500%);
+}
+.imagegrafico{
+  position: relative; top: 50%; transform: translateY(-10%) translateX(-15%); width: 100%;
+}
