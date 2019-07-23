@@ -22,7 +22,7 @@ export class Navbar extends React.Component {
 						<Link className="dropdown-item" to="/mediciones">
 							Mediciones
 						</Link>
-						<Link className="dropdown-item" to="/mediciones">
+						<Link className="dropdown-item" to="/usuario">
 							Usuario
 						</Link>
 					</div>
