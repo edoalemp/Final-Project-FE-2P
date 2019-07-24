@@ -10,39 +10,39 @@ export class Stations extends React.Component {
 		return (
 			<div className="container">
 				<div className="row justify-content-md-center">
-					<div className="col-md-6 col-center mt-1">
+					<div className="col-md-6 col-center mt-3">
 						<nav id="navbarint" className="navbar navbar-light bg-light">
 							<a className="navbar-brand" href="#liststations">
-								Estaciones
+								Listado de Estaciones
 							</a>
 						</nav>
-						<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+						<div data-spy="scroll" data-target="#navbar-example" data-offset="0">
 							<div className="list-group" id="liststations">
-								<a
-									href="#"
+								<Link
+									to="/estacion"
 									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
 									Cras justo odio
-								</a>
-								<a
-									href="#"
+								</Link>
+								<Link
+									to="/estacion"
 									className="list-group-item list-group-item-action m-0 p-0 border border-0  text-left">
 									Dapibus ac facilisis in
-								</a>
-								<a
-									href="#"
+								</Link>
+								<Link
+									to="/estacion"
 									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
 									Morbi leo risus
-								</a>
-								<a
-									href="#"
+								</Link>
+								<Link
+									to="/estacion"
 									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
 									Porta ac consectetur ac
-								</a>
-								<a
-									href="#"
+								</Link>
+								<Link
+									to="/estacion"
 									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left ">
 									Vestibulum at eros
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

@@ -6,8 +6,9 @@ import { Home } from "./views/home";
 import { User } from "./views/user";
 import { Stations } from "./views/stations";
 import { Measures } from "./views/measures";
+import { OneStation } from "./views/station";
+import { OneMeasure } from "./views/measure";
 
-import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -30,8 +31,8 @@ export class Layout extends React.Component {
 							<Route path="/usuario" component={User} />
 							<Route path="/estaciones" component={Stations} />
 							<Route path="/mediciones" component={Measures} />
-							<Route path="/mediciones/:theid" component={Single} />
-							<Route path="/estaciones/:theid" component={Single} />
+							<Route path="/medicion" component={OneMeasure} />
+							<Route path="/estacion" component={OneStation} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />
