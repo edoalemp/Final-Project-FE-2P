@@ -11,38 +11,25 @@ export class OneStation extends React.Component {
 			<div className="container">
 				<div className="row justify-content-md-center">
 					<div className="col-md-8 col-center mt-3">
-						<nav id="navbarint" className="navbar navbar-light bg-light">
-							<a className="navbar-brand" href="#liststations">
-								Estación
-							</a>
+						<nav className="navbar navbar-light bg-light text-center">
+							<h2>Estación</h2>
 						</nav>
-						<div data-spy="scroll" data-target="#navbar-example" data-offset="0">
-							<div className="list-group" id="liststations">
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
-									Cras justo odio
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0  text-left">
-									Dapibus ac facilisis in
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
-									Morbi leo risus
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
-									Porta ac consectetur ac
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left ">
-									Vestibulum at eros
-								</a>
+						<div className="jumbotron jumbotron-fluid pt-0 pb-0 mb-0">
+							<div className="container">
+								<h4>Identificador</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+							<div className="container">
+								<h4>Dirección</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+							<div className="container">
+								<h4>Coordenadas geográficas</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+							<div className="container">
+								<h4>Referencia</h4>
+								<p className="lead ml-2">identificador</p>
 							</div>
 						</div>
 					</div>

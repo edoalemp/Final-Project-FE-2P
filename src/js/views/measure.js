@@ -11,38 +11,50 @@ export class OneMeasure extends React.Component {
 			<div className="container">
 				<div className="row justify-content-md-center">
 					<div className="col-md-8 col-center mt-3">
-						<nav id="navbarint" className="navbar navbar-light bg-light">
-							<a className="navbar-brand" href="#listmeasures">
-								Medida
-							</a>
+						<nav className="navbar navbar-light bg-light text-center">
+							<h2>Información de Señal de Medición</h2>
 						</nav>
-						<div data-spy="scroll" data-target="#navbar-example" data-offset="0">
-							<div className="list-group" id="listmeasures">
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
-									Cras
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0  text-left">
-									Dapibus ac facilisis in
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
-									Morbi leo risus
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left">
-									Porta ac consectetur ac
-								</a>
-								<a
-									href="#"
-									className="list-group-item list-group-item-action m-0 p-0 border border-0 text-left ">
-									Vestibulum at eros
-								</a>
+						<div className="jumbotron jumbotron-fluid pt-0 pb-0 mb-0">
+							<div className="container">
+								<h4>Identificador</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+							<div className="container">
+								<h4>Dirección</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+							<div className="container">
+								<h4>Coordenadas geográficas</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+							<div className="container">
+								<h4>Referencia</h4>
+								<p className="lead ml-2">identificador</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="row justify-content-md-center">
+					<div className="col-md-8 col-center mt-0">
+						<nav className="navbar navbar-light bg-light text-center">
+							<a className="h2">Valores de medida</a>
+						</nav>
+						<div className="jumbotron jumbotron-fluid pt-0 pb-0">
+							<div className="container">
+								<h4>Valor Actual</h4>
+								<p className="lead ml-2">Valor</p>
+							</div>
+							<div className="container">
+								<h4>Valor Máximo</h4>
+								<p className="lead ml-2">Valor</p>
+							</div>
+							<div className="container">
+								<h4>Valor Mínimo</h4>
+								<p className="lead ml-2">Valor</p>
+							</div>
+							<div className="container">
+								<h4>Valor Promedio</h4>
+								<p className="lead ml-2">Valor</p>
 							</div>
 						</div>
 					</div>
