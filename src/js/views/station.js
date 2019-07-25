@@ -12,11 +12,11 @@ export class OneStation extends React.Component {
 				<div className="row justify-content-md-center">
 					<div className="col-md-8 col-center mt-3">
 						<nav className="navbar navbar-light bg-light text-center">
-							<h2>Estación</h2>
+							<h4>Estación</h4>
 						</nav>
 						<div className="jumbotron jumbotron-fluid pt-0 pb-0 mb-0">
 							<div className="container">
-								<h4>Identificador</h4>
+								<h6>Identificador</h6>
 								<p className="lead ml-2">identificador</p>
 							</div>
 							<div className="container">

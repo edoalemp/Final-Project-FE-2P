@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.scss";
+import "../../styles/index.scss";
 
 export class Home extends React.Component {
 	render() {
 		return (
 			<div className=" text-center">
-				<div className=" row mt-1 justify-content-md-center">
+				<div className=" row mt-2 justify-content-md-center">
 					<h1> Telemetría </h1>
 				</div>
 
@@ -16,7 +16,7 @@ export class Home extends React.Component {
 				</div>
 
 				<div className="row  justify-content-md-center">
-					<div className="col-md-11 col-center mt-1">
+					<div className="col-md-6 col-center mt-1">
 						<h3 />
 					</div>
 				</div>

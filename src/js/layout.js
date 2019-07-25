@@ -31,8 +31,8 @@ export class Layout extends React.Component {
 							<Route path="/usuario" component={User} />
 							<Route path="/estaciones" component={Stations} />
 							<Route path="/mediciones" component={Measures} />
-							<Route path="/medicion" component={OneMeasure} />
 							<Route path="/estacion" component={OneStation} />
+							<Route path="/medicion" component={OneMeasure} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />
