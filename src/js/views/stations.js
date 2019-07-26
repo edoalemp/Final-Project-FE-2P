@@ -10,7 +10,7 @@ export class Stations extends React.Component {
 				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
-							<h4 href="#liststations">Listado de Estaciones</h4>
+							<h4 href="#liststations">Estaciones</h4>
 						</nav>
 						<div data-spy="scroll" data-target="#navbar-example" data-offset="0">
 							<div className="list-group" id="liststations">
