@@ -6,26 +6,39 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-expand-lg navbar-light bg-dark">
-				<div className="dropdown">
-					<button className="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-						<FontAwesomeIcon icon={faBars} />
-						<i className="fas fa-grip-lines" />
-					</button>
-					<div className="dropdown-menu">
-						<Link className="dropdown-item" to="/">
-							Inicio
-						</Link>
-						<Link className="dropdown-item" to="/estaciones">
-							Estaciones
-						</Link>
-						<Link className="dropdown-item" to="/mediciones">
-							Mediciones
-						</Link>
-						<Link className="dropdown-item" to="/usuario">
-							Usuario
-						</Link>
-					</div>
+			<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+				<a className="navbar-brand" href="#">
+					Nombre
+				</a>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbar"
+					aria-controls="navbar"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon" />
+				</button>
+
+				<div className="collapse navbar-collapse" id="navbar">
+					<ul className="navbar-nav mr-auto">
+						<li className="nav-item">
+							<Link className="nav-link" to="/">
+								Home
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/estaciones">
+								Estaciones
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/mediciones">
+								Variables
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		);
