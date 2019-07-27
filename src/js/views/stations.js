@@ -41,7 +41,7 @@ export class Stations extends React.Component {
 									<td>48.00</td>
 									<td className="px-0">
 										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/estacion" role="button" className="btn btn-primary">
+											<a href="/estaciones/id" role="button" className="btn btn-primary">
 												Mostrar
 											</a>
 											<a role="button" className="btn btn-primary">
@@ -60,7 +60,7 @@ export class Stations extends React.Component {
 									<td>00.00</td>
 									<td className="px-0">
 										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/estacion" role="button" className="btn btn-primary">
+											<a href="/estaciones/id" role="button" className="btn btn-primary">
 												Mostrar
 											</a>
 											<a role="button" className="btn btn-primary">

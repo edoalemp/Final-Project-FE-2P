@@ -29,10 +29,12 @@ export class Layout extends React.Component {
 							<Route exact path="/" component={Login} />
 							<Route path="/home" component={Home} />
 							<Route path="/usuario" component={User} />
+							<Route path="/estaciones/id" component={OneStation} />
 							<Route path="/estaciones" component={Stations} />
+							<Route path="/mediciones/id" component={Measures} />
+							<Route exact path="/medicion" component={Home} />
 							<Route path="/mediciones" component={Measures} />
-							<Route path="/medicion" component={OneMeasure} />
-							<Route path="/estacion" component={OneStation} />
+
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

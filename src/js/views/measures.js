@@ -10,7 +10,7 @@ export class Measures extends React.Component {
 				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
-							<h4>Variables</h4>
+							<h4>Variables del sistema</h4>
 						</nav>
 
 						<table className="table table-bordered mb-0">
