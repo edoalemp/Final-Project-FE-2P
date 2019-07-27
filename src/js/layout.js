@@ -31,7 +31,7 @@ export class Layout extends React.Component {
 							<Route path="/usuario" component={User} />
 							<Route path="/estaciones/id" component={OneStation} />
 							<Route path="/estaciones" component={Stations} />
-							<Route path="/mediciones/id" component={Measures} />
+							<Route path="/mediciones/id" component={Home} />
 							<Route exact path="/medicion" component={Home} />
 							<Route path="/mediciones" component={Measures} />
 
