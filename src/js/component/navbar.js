@@ -8,7 +8,7 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
 				<a className="navbar-brand" href="#">
-					Nombre
+					Logo
 				</a>
 				<button
 					className="navbar-toggler"
@@ -24,7 +24,7 @@ export class Navbar extends React.Component {
 				<div className="collapse navbar-collapse" id="navbar">
 					<ul className="navbar-nav mr-auto">
 						<li className="nav-item">
-							<Link className="nav-link" to="/">
+							<Link className="nav-link" to="/home">
 								Home
 							</Link>
 						</li>
@@ -36,6 +36,11 @@ export class Navbar extends React.Component {
 						<li className="nav-item">
 							<Link className="nav-link" to="/mediciones">
 								Variables
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/">
+								Salir
 							</Link>
 						</li>
 					</ul>

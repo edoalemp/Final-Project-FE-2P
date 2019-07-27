@@ -3,13 +3,14 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
+import { Login } from "./views/login";
 import { User } from "./views/user";
 import { Stations } from "./views/stations";
 import injectContext from "./store/appContext";
 import { Measures } from "./views/measures";
-import { OneStation } from "./views/station";
+import { OneMeasure } from "./views/onemeasure";
+import { OneStation } from "./views/onestation";
 import { Navbar } from "./component/navbar";
-import { OneMeasure } from "./views/measure";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -25,10 +26,12 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Navbar />
 						<Switch>
-							<Route exact path="/" component={Home} />
+							<Route exact path="/" component={Login} />
+							<Route path="/home" component={Home} />
 							<Route path="/usuario" component={User} />
 							<Route path="/estaciones" component={Stations} />
 							<Route path="/mediciones" component={Measures} />
+							<Route path="/medicion" component={OneMeasure} />
 							<Route path="/estacion" component={OneStation} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
