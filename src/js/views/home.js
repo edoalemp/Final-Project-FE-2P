@@ -16,7 +16,7 @@ export class Home extends React.Component {
 						<table className="table table-bordered mb-0">
 							<tbody>
 								<tr>
-									<td className="w-30 p-0" scope="col">
+									<td colSpan="2" className="p-0" scope="col">
 										<div className="input-group">
 											<div className="input-group-prepend">
 												<label className="input-group-text" htmlFor="inputGroupSelect01">
@@ -31,7 +31,7 @@ export class Home extends React.Component {
 											</select>
 										</div>
 									</td>
-									<td className="w-40 p-0" scope="col">
+									<td colSpan="2" className="p-0" scope="col">
 										<div className="input-group">
 											<div className="input-group-prepend">
 												<label className="input-group-text" htmlFor="inputGroupSelect01">
@@ -46,7 +46,7 @@ export class Home extends React.Component {
 											</select>
 										</div>
 									</td>
-									<td className="w-30 p-0" scope="col">
+									<td colSpan="2" className="p-0" scope="col">
 										<div className="input-group">
 											<div className="input-group-prepend">
 												<label className="input-group-text" htmlFor="inputGroupSelect01">
@@ -63,19 +63,28 @@ export class Home extends React.Component {
 									</td>
 								</tr>
 								<tr>
-									<td colSpan="3" className="w-80" scope="col">
+									<td colSpan="6" className="w-100" scope="col">
 										<div className="graphdiv" />
 									</td>
 								</tr>
 								<tr>
-									<th className="w-20" scope="col">
-										Variable
+									<th className="" scope="col">
+										Valor máximo
 									</th>
-									<td className="w-60" scope="col">
-										valor
+									<td className="" scope="col">
+										0.0
 									</td>
-									<td className="w-20" scope="col">
-										unidades
+									<th className="" scope="col">
+										valor mínimo
+									</th>
+									<td className="" scope="col">
+										0.0
+									</td>
+									<th className="" scope="col">
+										Promedio
+									</th>
+									<td className="" scope="col">
+										0.0
 									</td>
 								</tr>
 							</tbody>
@@ -83,65 +92,16 @@ export class Home extends React.Component {
 					</div>
 				</div>
 				<div className="row justify-content-md-center">
-					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
+					<div id="list" className="col-md-6 col-center mt-3 border rounded px-0">
 						<table className="table table-bordered mb-0">
-							<thead>
-								<tr>
-									<th className="w-10" scope="col">
-										#id
-									</th>
-									<th className="w-30" scope="col">
-										Variable
-									</th>
-									<th className="w-20" scope="col">
-										Valor
-									</th>
-									<th className="w-20" scope="col">
-										Unidades
-									</th>
-									<th className="w-20" scope="col">
-										Acciones
-									</th>
-								</tr>
-							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>Temperatura</td>
-									<td>32</td>
-									<td>°C</td>
-									<td className="px-0">
-										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/medicion" role="button" className="btn btn-primary">
-												Mostrar
-											</a>
-											<a role="button" className="btn btn-primary">
-												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary">
-												Editar
-											</a>
-										</div>
-									</td>
+									<td className="py-1">N° de estaciones</td>
+									<td className="py-1">10</td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td>Presión</td>
-									<td>1</td>
-									<td>P</td>
-									<td className="px-0">
-										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/medicion" role="button" className="btn btn-primary">
-												Mostrar
-											</a>
-											<a role="button" className="btn btn-primary">
-												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary">
-												Editar
-											</a>
-										</div>
-									</td>
+									<td className="py-1">N° de variables medidas</td>
+									<td className="py-1">10</td>
 								</tr>
 							</tbody>
 						</table>
