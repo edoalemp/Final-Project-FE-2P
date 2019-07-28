@@ -10,13 +10,13 @@ export class Home extends React.Component {
 				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
-							<h4>Te peratura en la Estacion</h4>
+							<h4>Gráfico de variable de la estación</h4>
 						</nav>
 
 						<table className="table table-bordered mb-0">
 							<tbody>
 								<tr>
-									<td className="w-30" scope="col">
+									<td className="w-30 p-0" scope="col">
 										<div className="input-group">
 											<div className="input-group-prepend">
 												<label className="input-group-text" htmlFor="inputGroupSelect01">
@@ -31,11 +31,11 @@ export class Home extends React.Component {
 											</select>
 										</div>
 									</td>
-									<td className="w-40" scope="col">
+									<td className="w-40 p-0" scope="col">
 										<div className="input-group">
 											<div className="input-group-prepend">
 												<label className="input-group-text" htmlFor="inputGroupSelect01">
-													Intervalo
+													Variable
 												</label>
 											</div>
 											<select className="custom-select" id="inputGroupSelect01">
@@ -46,11 +46,11 @@ export class Home extends React.Component {
 											</select>
 										</div>
 									</td>
-									<td className="w-30" scope="col">
+									<td className="w-30 p-0" scope="col">
 										<div className="input-group">
 											<div className="input-group-prepend">
 												<label className="input-group-text" htmlFor="inputGroupSelect01">
-													Intervalo
+													Estación
 												</label>
 											</div>
 											<select className="custom-select" id="inputGroupSelect01">
