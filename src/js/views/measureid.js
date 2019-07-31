@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export class OneMeasure extends React.Component {
+export class MeasureId extends React.Component {
 	render() {
 		return (
 			<div className="container">

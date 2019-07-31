@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.scss";
 
-export class OneStation extends React.Component {
+export class StationId extends React.Component {
 	render() {
 		return (
 			<div className="container">
@@ -84,7 +84,7 @@ export class OneStation extends React.Component {
 				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
-							<h4>Variables asignadas a la estación</h4>
+							<h4>Mediciones asignadas a la estación</h4>
 						</nav>
 
 						<table className="table table-bordered mb-0">

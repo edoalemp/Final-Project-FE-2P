@@ -10,7 +10,7 @@ export class Home extends React.Component {
 				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
-							<h4>Gráfico de variable de la estación</h4>
+							<h4>Gráfico de medición de variable en la estación</h4>
 						</nav>
 
 						<table className="table table-bordered mb-0">

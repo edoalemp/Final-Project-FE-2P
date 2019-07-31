@@ -8,8 +8,8 @@ import { User } from "./views/user";
 import { Stations } from "./views/stations";
 import injectContext from "./store/appContext";
 import { Measures } from "./views/measures";
-import { OneMeasure } from "./views/onemeasure";
-import { OneStation } from "./views/onestation";
+import { MeasureId } from "./views/measureid";
+import { StationId } from "./views/stationid";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -29,9 +29,9 @@ export class Layout extends React.Component {
 							<Route exact path="/" component={Login} />
 							<Route path="/home" component={Home} />
 							<Route path="/usuario" component={User} />
-							<Route path="/estaciones/id" component={OneStation} />
+							<Route path="/estaciones/id" component={StationId} />
 							<Route path="/estaciones" component={Stations} />
-							<Route path="/mediciones/id" component={Home} />
+							<Route path="/mediciones/id" component={MeasureId} />
 							<Route exact path="/medicion" component={Home} />
 							<Route path="/mediciones" component={Measures} />
 

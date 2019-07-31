@@ -10,7 +10,7 @@ export class Measures extends React.Component {
 				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
-							<h4>Variables del sistema</h4>
+							<h4>Lista de variables del sistema</h4>
 						</nav>
 
 						<table className="table table-bordered mb-0">
@@ -37,8 +37,8 @@ export class Measures extends React.Component {
 									<td>C°</td>
 									<td className="px-0">
 										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/medicion" role="button" className="btn btn-primary">
-												Mostrar
+											<a href="/mediciones/id" role="button" className="btn btn-primary">
+												Detalle
 											</a>
 											<a role="button" className="btn btn-primary">
 												Eliminar
@@ -56,8 +56,8 @@ export class Measures extends React.Component {
 
 									<td className="px-0">
 										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/medicion" role="button" className="btn btn-primary">
-												Mostrar
+											<a href="/mediciones/id" role="button" className="btn btn-primary">
+												Detalle
 											</a>
 											<a role="button" className="btn btn-primary">
 												Eliminar
