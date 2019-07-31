@@ -8,6 +8,17 @@ export class Stations extends React.Component {
 		return (
 			<div className="container">
 				<div className="row justify-content-md-center">
+					<div id="list" className="col-md-6 col-center mt-3 p-0 border rounded">
+						<nav
+							id="navbarint"
+							className="navbar navbar-light bg-light justify-content-md-center border p-0">
+							<a href="#" role="button" className="btn btn-primary w-100">
+								Agregar estación
+							</a>
+						</nav>
+					</div>
+				</div>
+				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
 							<h4>Estaciones</h4>
@@ -28,7 +39,7 @@ export class Stations extends React.Component {
 									<th className="w-20" scope="col">
 										Longitud
 									</th>
-									<th className="w-20 " scope="col">
+									<th className="w-20" scope="col">
 										Acciones
 									</th>
 								</tr>
@@ -40,14 +51,14 @@ export class Stations extends React.Component {
 									<td>56.00</td>
 									<td>48.00</td>
 									<td className="px-0">
-										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/estaciones/id" role="button" className="btn btn-primary">
+										<div className="btn-group d-flex" role="group" aria-label="buttons group">
+											<a href="/estaciones/id" role="button" className="btn btn-primary w-100">
 												Mostrar
 											</a>
-											<a role="button" className="btn btn-primary">
+											<a role="button" className="btn btn-primary w-100">
 												Eliminar
 											</a>
-											<a role="button" className="btn btn-primary">
+											<a role="button" className="btn btn-primary w-100">
 												Editar
 											</a>
 										</div>
@@ -59,14 +70,14 @@ export class Stations extends React.Component {
 									<td>00.00</td>
 									<td>00.00</td>
 									<td className="px-0">
-										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/estaciones/id" role="button" className="btn btn-primary">
+										<div className="btn-group d-flex" role="group" aria-label="buttons group">
+											<a href="/estaciones/id" role="button" className="btn btn-primary w-100">
 												Mostrar
 											</a>
-											<a role="button" className="btn btn-primary">
+											<a role="button" className="btn btn-primary w-100">
 												Eliminar
 											</a>
-											<a role="button" className="btn btn-primary">
+											<a role="button" className="btn btn-primary w-100">
 												Editar
 											</a>
 										</div>

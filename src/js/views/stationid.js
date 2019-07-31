@@ -82,6 +82,17 @@ export class StationId extends React.Component {
 					</div>
 				</div>
 				<div className="row justify-content-md-center">
+					<div id="list" className="col-md-6 col-center mt-3 p-0 border rounded">
+						<nav
+							id="navbarint"
+							className="navbar navbar-light bg-light justify-content-md-center border p-0">
+							<a href="#" role="button" className="btn btn-primary w-100">
+								Asignar Variable a estación
+							</a>
+						</nav>
+					</div>
+				</div>
+				<div className="row justify-content-md-center">
 					<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
 						<nav id="navbarint" className="navbar navbar-light bg-light justify-content-md-center border">
 							<h4>Mediciones asignadas a la estación</h4>
