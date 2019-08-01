@@ -12,9 +12,9 @@ export class Stations extends React.Component {
 						<nav
 							id="navbarint"
 							className="navbar navbar-light bg-light justify-content-md-center border p-0">
-							<a href="#" role="button" className="btn btn-primary w-100">
+							<Link to="#" role="button" className="btn btn-primary w-100">
 								Agregar estación
-							</a>
+							</Link>
 						</nav>
 					</div>
 				</div>
@@ -52,15 +52,15 @@ export class Stations extends React.Component {
 									<td>48.00</td>
 									<td className="px-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<a href="/estaciones/id" role="button" className="btn btn-primary w-100">
-												Mostrar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											<Link to="/estaciones/id" role="button" className="btn btn-primary w-100">
+												Detalle
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>
@@ -71,15 +71,15 @@ export class Stations extends React.Component {
 									<td>00.00</td>
 									<td className="px-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<a href="/estaciones/id" role="button" className="btn btn-primary w-100">
-												Mostrar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											<Link to="/estaciones/id" role="button" className="btn btn-primary w-100">
+												Detalle
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>

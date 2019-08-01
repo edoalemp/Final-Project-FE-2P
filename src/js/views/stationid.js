@@ -86,9 +86,9 @@ export class StationId extends React.Component {
 						<nav
 							id="navbarint"
 							className="navbar navbar-light bg-light justify-content-md-center border p-0">
-							<a href="#" role="button" className="btn btn-primary w-100">
+							<Link to="#" role="button" className="btn btn-primary w-100">
 								Asignar Variable a estación
-							</a>
+							</Link>
 						</nav>
 					</div>
 				</div>
@@ -126,15 +126,15 @@ export class StationId extends React.Component {
 									<td>°C</td>
 									<td className="px-0">
 										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/medicion" role="button" className="btn btn-primary">
+											<Link to="/medicion" role="button" className="btn btn-primary">
 												Mostrar
-											</a>
-											<a role="button" className="btn btn-primary">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>
@@ -145,15 +145,15 @@ export class StationId extends React.Component {
 									<td>P</td>
 									<td className="px-0">
 										<div className="btn-group" role="group" aria-label="buttons group">
-											<a href="/medicion" role="button" className="btn btn-primary">
+											<Link to="/medicion" role="button" className="btn btn-primary">
 												Mostrar
-											</a>
-											<a role="button" className="btn btn-primary">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>

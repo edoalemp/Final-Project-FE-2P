@@ -32,9 +32,9 @@ export class MeasureId extends React.Component {
 						<nav
 							id="navbarint"
 							className="navbar navbar-light bg-light justify-content-md-center border p-0">
-							<a href="#" role="button" className="btn btn-primary w-100">
+							<Link to="#" role="button" className="btn btn-primary w-100">
 								Asignar variable a estación
-							</a>
+							</Link>
 						</nav>
 					</div>
 				</div>
@@ -72,15 +72,15 @@ export class MeasureId extends React.Component {
 									<td>00.00</td>
 									<td className="px-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<a href="/home" role="button" className="btn btn-primary w-100">
+											<Link to="/home" role="button" className="btn btn-primary w-100">
 												Detalle
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>
@@ -91,15 +91,15 @@ export class MeasureId extends React.Component {
 									<td>00.00</td>
 									<td className="px-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<a href="/home" role="button" className="btn btn-primary w-100">
+											<Link to="/home" role="button" className="btn btn-primary w-100">
 												Detalle
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>

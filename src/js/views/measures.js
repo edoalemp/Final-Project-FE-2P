@@ -12,9 +12,9 @@ export class Measures extends React.Component {
 						<nav
 							id="navbarint"
 							className="navbar navbar-light bg-light justify-content-md-center border p-0">
-							<a href="#" role="button" className="btn btn-primary w-100">
+							<Link to="#" role="button" className="btn btn-primary w-100">
 								Agregar variable
-							</a>
+							</Link>
 						</nav>
 					</div>
 				</div>
@@ -48,15 +48,15 @@ export class Measures extends React.Component {
 									<td>C°</td>
 									<td className="px-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<a href="/mediciones/id" role="button" className="btn btn-primary w-100">
+											<Link to="/mediciones/id" role="button" className="btn btn-primary w-100">
 												Detalle
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>
@@ -67,15 +67,15 @@ export class Measures extends React.Component {
 
 									<td className="px-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<a href="/mediciones/id" role="button" className="btn btn-primary w-100">
+											<Link to="/mediciones/id" role="button" className="btn btn-primary w-100">
 												Detalle
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Eliminar
-											</a>
-											<a role="button" className="btn btn-primary w-100">
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100">
 												Editar
-											</a>
+											</Link>
 										</div>
 									</td>
 								</tr>
