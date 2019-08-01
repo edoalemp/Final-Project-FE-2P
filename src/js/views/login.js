@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/index.scss";
 
 export class Login extends React.Component {
 	sending(e) {
