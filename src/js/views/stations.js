@@ -26,57 +26,63 @@ export class Stations extends React.Component {
 						<table className="table table-bordered mb-0">
 							<thead>
 								<tr>
-									<th className="w-10" scope="col">
+									<th className="w-10 py-1" scope="col">
 										#id
 									</th>
-									<th className="w-30" scope="col">
+									<th className="w-30 py-1" scope="col">
 										Variable
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Latitud
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Longitud
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Acciones
 									</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>Estación 1</td>
-									<td>56.00</td>
-									<td>48.00</td>
-									<td className="px-0">
-										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<Link to="/estaciones/id" role="button" className="btn btn-primary w-100">
+									<td className="py-1">1</td>
+									<td className="py-1">Estación 1</td>
+									<td className="py-1">56.00</td>
+									<td className="py-1">48.00</td>
+									<td className="p-0">
+										<div className="btn-group d-flex py-0" role="group" aria-label="buttons group">
+											<Link
+												to="/estaciones/id"
+												role="button"
+												className="btn btn-primary w-100 py-1">
 												Detalle
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Editar
 											</Link>
 										</div>
 									</td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td>Estación 2</td>
-									<td>00.00</td>
-									<td>00.00</td>
-									<td className="px-0">
+									<td className="py-1">2</td>
+									<td className="py-1">Estación 2</td>
+									<td className="py-1">00.00</td>
+									<td className="py-1">00.00</td>
+									<td className="p-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<Link to="/estaciones/id" role="button" className="btn btn-primary w-100">
+											<Link
+												to="/estaciones/id"
+												role="button"
+												className="btn btn-primary w-100 py-1">
 												Detalle
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100p py-1">
 												Editar
 											</Link>
 										</div>

@@ -26,53 +26,58 @@ export class Measures extends React.Component {
 						<table className="table table-bordered mb-0">
 							<thead>
 								<tr>
-									<th className="w-10" scope="col">
+									<th className="w-10 py-1" scope="col">
 										#id
 									</th>
-									<th className="w-50" scope="col">
+									<th className="w-50 py-1" scope="col">
 										Variable
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Unidad
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Acciones
 									</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>temperatura</td>
-									<td>C°</td>
-									<td className="px-0">
+									<td className="py-1">1</td>
+									<td className="py-1">temperatura</td>
+									<td className="py-1">C°</td>
+									<td className="p-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<Link to="/mediciones/id" role="button" className="btn btn-primary w-100">
+											<Link
+												to="/mediciones/id"
+												role="button"
+												className="btn btn-primary w-100 py-1">
 												Detalle
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Editar
 											</Link>
 										</div>
 									</td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td>Presión</td>
-									<td>P</td>
-
-									<td className="px-0">
+									<td className="py-1">2</td>
+									<td className="py-1">Presión</td>
+									<td className="py-1">P</td>
+									<td className="p-0">
 										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<Link to="/mediciones/id" role="button" className="btn btn-primary w-100">
+											<Link
+												to="/mediciones/id"
+												role="button"
+												className="btn btn-primary w-100 py-1">
 												Detalle
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Editar
 											</Link>
 										</div>

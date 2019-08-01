@@ -15,65 +15,54 @@ export class StationId extends React.Component {
 						<table className="table table-bordered mb-0">
 							<tbody>
 								<tr>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Nombre
 									</th>
-									<td colSpan="2" className="w-80" scope="col">
+									<td colSpan="2" className="w-80 py-1" scope="col">
 										Nombre
 									</td>
 								</tr>
 								<tr>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Latitud
 									</th>
-									<td colSpan="2" className="w-80" scope="col">
+									<td colSpan="2" className="w-80 py-1" scope="col">
 										00.00
 									</td>
 								</tr>
 								<tr>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Longitud
 									</th>
-									<td colSpan="2" className="w-80" scope="col">
+									<td colSpan="2" className="w-80 py-1" scope="col">
 										00.00
 									</td>
 								</tr>
 								<tr>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Responsable
 									</th>
-									<td colSpan="2" className="w-80" scope="col">
+									<td colSpan="2" className="w-80 py-1" scope="col">
 										nombre
 									</td>
 								</tr>
 								<tr>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Dirección
 									</th>
-									<td className="w-80" scope="col">
+									<td className="w-80 py-1" scope="col">
 										Calle
 									</td>
-									<td className="w-20" scope="col">
+									<td className="w-20 py-1" scope="col">
 										Número
 									</td>
 								</tr>
 								<tr>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Referencia
 									</th>
-									<td colSpan="2" className="w-80" scope="col">
+									<td colSpan="2" className="w-80 py-1" scope="col">
 										Descripción
-									</td>
-								</tr>
-								<tr>
-									<th className="w-20" scope="col">
-										Variable
-									</th>
-									<td className="w-60" scope="col">
-										valor
-									</td>
-									<td className="w-20" scope="col">
-										unidades
 									</td>
 								</tr>
 							</tbody>
@@ -100,58 +89,52 @@ export class StationId extends React.Component {
 						<table className="table table-bordered mb-0">
 							<thead>
 								<tr>
-									<th className="w-10" scope="col">
+									<th className="w-10 py-1" scope="col">
 										#id
 									</th>
-									<th className="w-30" scope="col">
+									<th className="w-30 py-1" scope="col">
 										Variable
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Valor
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Unidades
 									</th>
-									<th className="w-20" scope="col">
+									<th className="w-20 py-1" scope="col">
 										Acciones
 									</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>Temperatura</td>
-									<td>32</td>
-									<td>°C</td>
-									<td className="px-0">
-										<div className="btn-group" role="group" aria-label="buttons group">
-											<Link to="/medicion" role="button" className="btn btn-primary">
+									<td className="py-1">1</td>
+									<td className="py-1">Temperatura</td>
+									<td className="py-1">32</td>
+									<td className="py-1">°C</td>
+									<td className="p-0">
+										<div className="btn-group d-flex" role="group" aria-label="buttons group">
+											<Link to="/medicion" role="button" className="btn btn-primary w-100 py-1">
 												Mostrar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
-											</Link>
-											<Link to="#" role="button" className="btn btn-primary">
-												Editar
 											</Link>
 										</div>
 									</td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td>Presión</td>
-									<td>1</td>
-									<td>P</td>
-									<td className="px-0">
-										<div className="btn-group" role="group" aria-label="buttons group">
-											<Link to="/medicion" role="button" className="btn btn-primary">
+									<td className="py-1">2</td>
+									<td className="py-1">Presión</td>
+									<td className="py-1">1</td>
+									<td className="py-1">P</td>
+									<td className="p-0">
+										<div className="btn-group d-flex" role="group" aria-label="buttons group">
+											<Link to="/medicion" role="button" className="btn btn-primary w-100 py-1">
 												Mostrar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
-											</Link>
-											<Link to="#" role="button" className="btn btn-primary">
-												Editar
 											</Link>
 										</div>
 									</td>
