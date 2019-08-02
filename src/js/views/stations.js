@@ -72,7 +72,7 @@ export class Stations extends React.Component {
 									<td className="py-1">00.00</td>
 									<td className="py-1">00.00</td>
 									<td className="p-0">
-										<div className="btn-group d-flex" role="group" aria-label="buttons group">
+										<div className="btn-group d-flex py-0" role="group" aria-label="buttons group">
 											<Link
 												to="/estaciones/id"
 												role="button"
@@ -82,7 +82,7 @@ export class Stations extends React.Component {
 											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Eliminar
 											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100p py-1">
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Editar
 											</Link>
 										</div>
