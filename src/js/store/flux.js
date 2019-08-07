@@ -4,9 +4,13 @@ const getState = ({ getStore, setStore }) => {
 			stations: [],
 			onestation: {},
 			persons: [],
+			oneperson: {},
 			organizations: [],
+			oneorganization: {},
 			measures: [],
-			assignedmeasures: []
+			onemeasure: {},
+			assignedmeasures: [],
+			oneassignedmeasure: {}
 		},
 		actions: {
 			getstations: urlstring => {
