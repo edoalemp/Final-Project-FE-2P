@@ -18,7 +18,7 @@ export class Measures extends React.Component {
 									<td className="p-0">
 										<div className="btn-group d-flex py-0" role="group" aria-label="buttons group">
 											<Link
-												to="/estaciones/id"
+												to="/mediciones/id"
 												role="button"
 												className="btn btn-primary w-100 py-1"
 												onClick={() => actions.getstationswithmeasure()}>

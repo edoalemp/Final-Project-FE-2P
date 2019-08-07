@@ -10,7 +10,7 @@ const getState = ({ getStore, setStore }) => {
 			measures: [],
 			onemeasure: {},
 			assignedmeasures: [],
-			oneassignedmeasure: {}
+			assignedmeasuresof: []
 		},
 		actions: {
 			getstations: urlstring => {
@@ -63,7 +63,7 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
-			getonestation: urlstring => {
+			getonestation: (urlstring, stationid) => {
 				fetch(urlstring, {
 					method: "GET",
 					headers: {
@@ -77,6 +77,26 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							onestation: data
 						});
+
+						fetch(urlstring + "/assignedmeasures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									assignedmeasuresof: data
+								});
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+
 						console.log(data);
 					})
 					.catch(error => {
@@ -133,10 +153,29 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
-			addassignmeasure: urlstring => {},
-			deleteassignmeasure: urlstring => {},
-			getmeasuressofstation: urlstring => {},
-			getstationswithmeasure: urlstring => {}
+			addmeasureto: urlstring => {},
+			deletemeasurefrom: urlstring => {},
+			getmeasuresof: urlstring => {},
+			getmeasuresfrom: urlstring => {
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							assignedmeasuresof: data
+						});
+						console.log(data);
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			}
 		}
 	};
 };

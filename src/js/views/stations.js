@@ -25,7 +25,8 @@ export class Stations extends React.Component {
 												onClick={() =>
 													actions.getonestation(
 														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations/" +
-															store.stations[stationi].id
+															store.stations[stationi].id,
+														store.stations[stationi]["id"]
 													)
 												}>
 												Detalle

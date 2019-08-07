@@ -8,6 +8,7 @@ export class StationId extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					let stationframe;
+					let arrayhtml = [];
 					stationframe = (
 						<div className="row justify-content-md-center">
 							<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
@@ -67,7 +68,28 @@ export class StationId extends React.Component {
 							</div>
 						</div>
 					);
-
+					if (store.assignedmeasuresof.length > 0) {
+						for (let measurei = 0; measurei <= store.assignedmeasuresof.length - 1; measurei++) {
+							arrayhtml.push(
+								<tr key={measurei}>
+									<td className="py-1">1</td>
+									<td className="py-1">Temperatura</td>
+									<td className="py-1">32</td>
+									<td className="py-1">°C</td>
+									<td className="p-0">
+										<div className="btn-group d-flex" role="group" aria-label="buttons group">
+											<Link to="/medicion" role="button" className="btn btn-primary w-100 py-1">
+												Mostrar
+											</Link>
+											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
+												Eliminar
+											</Link>
+										</div>
+									</td>
+								</tr>
+							);
+						}
+					}
 					return (
 						<div className="container">
 							{stationframe}
@@ -110,58 +132,7 @@ export class StationId extends React.Component {
 												</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<td className="py-1">1</td>
-												<td className="py-1">Temperatura</td>
-												<td className="py-1">32</td>
-												<td className="py-1">°C</td>
-												<td className="p-0">
-													<div
-														className="btn-group d-flex"
-														role="group"
-														aria-label="buttons group">
-														<Link
-															to="/medicion"
-															role="button"
-															className="btn btn-primary w-100 py-1">
-															Mostrar
-														</Link>
-														<Link
-															to="#"
-															role="button"
-															className="btn btn-primary w-100 py-1">
-															Eliminar
-														</Link>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td className="py-1">2</td>
-												<td className="py-1">Presión</td>
-												<td className="py-1">1</td>
-												<td className="py-1">P</td>
-												<td className="p-0">
-													<div
-														className="btn-group d-flex"
-														role="group"
-														aria-label="buttons group">
-														<Link
-															to="/medicion"
-															role="button"
-															className="btn btn-primary w-100 py-1">
-															Mostrar
-														</Link>
-														<Link
-															to="#"
-															role="button"
-															className="btn btn-primary w-100 py-1">
-															Eliminar
-														</Link>
-													</div>
-												</td>
-											</tr>
-										</tbody>
+										<tbody>{arrayhtml}</tbody>
 									</table>
 								</div>
 							</div>
