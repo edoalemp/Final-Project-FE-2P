@@ -1,7 +1,12 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			stations: []
+			stations: [],
+			onestation: {},
+			persons: [],
+			organizations: [],
+			measures: [],
+			assignedmeasures: []
 		},
 		actions: {
 			getstations: urlstring => {
@@ -29,7 +34,7 @@ const getState = ({ getStore, setStore }) => {
 			deletestation: (urlstring, stationid) => {
 				let tempstore = getStore();
 
-				fetch("https://3000-fb671d39-689b-4699-b239-e562d8103680.ws-us0.gitpod.io/stations/" + stationid, {
+				fetch(urlstring, {
 					method: "DELETE",
 					headers: {
 						"Content-Type": "application/json"
@@ -54,7 +59,26 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
-			getonestation: urlstring => {},
+			getonestation: urlstring => {
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							onestation: data
+						});
+						console.log(data);
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
 			getmeasures: urlstring => {},
 			addmeasure: urlstring => {},
 			editmeasure: urlstring => {},

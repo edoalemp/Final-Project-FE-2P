@@ -21,7 +21,13 @@ export class Stations extends React.Component {
 											<Link
 												to="/estaciones/id"
 												role="button"
-												className="btn btn-primary w-100 py-1">
+												className="btn btn-primary w-100 py-1"
+												onClick={() =>
+													actions.getonestation(
+														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations/" +
+															store.stations[stationi].id
+													)
+												}>
 												Detalle
 											</Link>
 											<Link
@@ -30,7 +36,7 @@ export class Stations extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.deletestation(
-														"https://3000-fb671d39-689b-4699-b239-e562d8103680.ws-us0.gitpod.io/stations/" +
+														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations/" +
 															store.stations[stationi].id,
 														store.stations[stationi]["id"]
 													)
