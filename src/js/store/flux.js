@@ -79,10 +79,56 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
-			getmeasures: urlstring => {},
+			getmeasures: urlstring => {
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							measures: data
+						});
+						console.log(data);
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
 			addmeasure: urlstring => {},
 			editmeasure: urlstring => {},
-			deletemeasure: urlstring => {},
+			deletemeasure: (urlstring, measureid) => {
+				let tempstore = getStore();
+
+				fetch(urlstring, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						console.log(resp.status);
+						if (resp.status === 200) {
+							for (let i = 0; i <= tempstore.measures.length - 1; i++) {
+								if (tempstore.measures[i].id === measureid) {
+									tempstore.measures.splice(i, 1);
+									break;
+								}
+							}
+						}
+						setStore({
+							measures: tempstore.measures
+						});
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
 			addassignmeasure: urlstring => {},
 			deleteassignmeasure: urlstring => {},
 			getmeasuressofstation: urlstring => {},

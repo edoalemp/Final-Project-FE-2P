@@ -45,7 +45,14 @@ export class Navbar extends React.Component {
 										</Link>
 									</li>
 									<li className="nav-item">
-										<Link className="nav-link" to="/mediciones">
+										<Link
+											className="nav-link"
+											onClick={() =>
+												actions.getmeasures(
+													"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures"
+												)
+											}
+											to="/mediciones">
 											Variables
 										</Link>
 									</li>
