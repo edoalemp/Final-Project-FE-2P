@@ -48,10 +48,10 @@ export class StationId extends React.Component {
 												Dirección
 											</th>
 											<td className="w-80 py-1" scope="col">
-												Calle
+												{store.onestation.streetaddress}
 											</td>
 											<td className="w-20 py-1" scope="col">
-												Número
+												{store.onestation.numberaddress}
 											</td>
 										</tr>
 										<tr>
