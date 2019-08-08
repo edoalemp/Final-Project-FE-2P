@@ -147,7 +147,7 @@ const getState = ({ getStore, setStore }) => {
 							})
 							.then(data => {
 								setStore({
-									measures: data
+									stations: data
 								});
 								console.log(data);
 							})
