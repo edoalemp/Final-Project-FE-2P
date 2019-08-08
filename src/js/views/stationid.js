@@ -74,7 +74,7 @@ export class StationId extends React.Component {
 								if (store.assignedmeasuresof[i].measure_id == store.measures[j].id) {
 									arrayhtml.push(
 										<tr key={i}>
-											<td className="py-1">{store.measures[j].id}</td>
+											<td className="py-1">{store.assignedmeasuresof[i].id}</td>
 											<td className="py-1">{store.measures[j].name}</td>
 											<td className="py-1">32</td>
 											<td className="py-1">{store.measures[j].unit}</td>
@@ -89,7 +89,17 @@ export class StationId extends React.Component {
 														className="btn btn-primary w-100 py-1">
 														Mostrar
 													</Link>
-													<Link to="#" role="button" className="btn btn-primary w-100 py-1">
+													<Link
+														to="#"
+														role="button"
+														className="btn btn-primary w-100 py-1"
+														onClick={() =>
+															actions.deletemeasurefrom(
+																"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/assignedmeasures/" +
+																	store.assignedmeasuresof[i].id,
+																store.assignedmeasuresof[i].id
+															)
+														}>
 														Eliminar
 													</Link>
 												</div>

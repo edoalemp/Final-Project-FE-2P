@@ -13,6 +13,8 @@ const getState = ({ getStore, setStore }) => {
 			assignedmeasuresof: []
 		},
 		actions: {
+			//1. trae lista de estaciones (OK)
+
 			getstations: urlstring => {
 				fetch(urlstring, {
 					method: "GET",
@@ -52,8 +54,17 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
+
+			//2. Agrega una estación
+
 			addstation: urlstring => {},
+
+			//3. edita una estación
+
 			editstation: urlstring => {},
+
+			//4. borra una estación (OK)
+
 			deletestation: (urlstring, stationid) => {
 				let tempstore = getStore();
 
@@ -82,6 +93,9 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
+
+			//5. Trae una estación (OK)
+
 			getonestation: (urlstring, stationid) => {
 				fetch(urlstring, {
 					method: "GET",
@@ -122,6 +136,9 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
+
+			//6. Trae lista con los tipos de medida (OK)
+
 			getmeasures: urlstring => {
 				fetch(urlstring, {
 					method: "GET",
@@ -161,8 +178,17 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
+
+			//7. Agrega un tipo de medida
+
 			addmeasure: urlstring => {},
+
+			//8. Edita un tipo de medida
+
 			editmeasure: urlstring => {},
+
+			//9. Borra un tipo de medida (OK)
+
 			deletemeasure: (urlstring, measureid) => {
 				let tempstore = getStore();
 
@@ -191,9 +217,48 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			},
+
+			//10. Asigna una medida a una estación
+
 			addmeasureto: urlstring => {},
-			deletemeasurefrom: urlstring => {},
-			getmeasuresof: urlstring => {},
+
+			//11. Borra una medida asignada a una estación (OK)
+
+			deletemeasurefrom: (urlstring, assignedmeasuresid) => {
+				let tempstore = getStore();
+
+				fetch(urlstring, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						console.log(resp.status);
+						if (resp.status === 200) {
+							for (let i = 0; i <= tempstore.assignedmeasuresof.length - 1; i++) {
+								if (tempstore.assignedmeasuresof[i].id === assignedmeasuresid) {
+									tempstore.assignedmeasuresof.splice(i, 1);
+									break;
+								}
+							}
+						}
+						setStore({
+							assignedmeasuresof: tempstore.assignedmeasuresof
+						});
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			//12. Trae lista con medidas asignadas de un tipo
+
+			getmeasurestype: urlstring => {},
+
+			//13. Trae lista con medidas asignadas a una estación (OK)
+
 			getmeasuresfrom: urlstring => {
 				fetch(urlstring, {
 					method: "GET",
