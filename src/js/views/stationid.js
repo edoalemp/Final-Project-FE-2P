@@ -69,25 +69,35 @@ export class StationId extends React.Component {
 						</div>
 					);
 					if (store.assignedmeasuresof.length > 0) {
-						for (let measurei = 0; measurei <= store.assignedmeasuresof.length - 1; measurei++) {
-							arrayhtml.push(
-								<tr key={measurei}>
-									<td className="py-1">1</td>
-									<td className="py-1">Temperatura</td>
-									<td className="py-1">32</td>
-									<td className="py-1">°C</td>
-									<td className="p-0">
-										<div className="btn-group d-flex" role="group" aria-label="buttons group">
-											<Link to="/medicion" role="button" className="btn btn-primary w-100 py-1">
-												Mostrar
-											</Link>
-											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
-												Eliminar
-											</Link>
-										</div>
-									</td>
-								</tr>
-							);
+						for (let i = 0; i <= store.assignedmeasuresof.length - 1; i++) {
+							for (let j = 0; j <= store.measures.length - 1; j++) {
+								if (store.assignedmeasuresof[i].measure_id == store.measures[j].id) {
+									arrayhtml.push(
+										<tr key={i}>
+											<td className="py-1">{store.measures[j].id}</td>
+											<td className="py-1">{store.measures[j].name}</td>
+											<td className="py-1">32</td>
+											<td className="py-1">{store.measures[j].unit}</td>
+											<td className="p-0">
+												<div
+													className="btn-group d-flex"
+													role="group"
+													aria-label="buttons group">
+													<Link
+														to="/medicion"
+														role="button"
+														className="btn btn-primary w-100 py-1">
+														Mostrar
+													</Link>
+													<Link to="#" role="button" className="btn btn-primary w-100 py-1">
+														Eliminar
+													</Link>
+												</div>
+											</td>
+										</tr>
+									);
+								}
+							}
 						}
 					}
 					return (

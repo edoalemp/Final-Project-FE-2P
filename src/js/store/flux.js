@@ -27,6 +27,25 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							stations: data
 						});
+						fetch("https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measures: data
+								});
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+
 						console.log(data);
 					})
 					.catch(error => {
@@ -117,6 +136,25 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							measures: data
 						});
+						fetch("https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measures: data
+								});
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+
 						console.log(data);
 					})
 					.catch(error => {
