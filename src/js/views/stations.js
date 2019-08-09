@@ -47,6 +47,32 @@ export class Stations extends React.Component {
 											<Link to="#" role="button" className="btn btn-primary w-100 py-1">
 												Editar
 											</Link>
+											<div className="modal fade" id="myModal">
+												<div className="modal-dialog modal-lg">
+													<div className="modal-content">
+														<div className="modal-header">
+															<h4 className="modal-title">Modal Heading</h4>
+															<button
+																type="button"
+																className="close"
+																data-dismiss="modal">
+																&times;
+															</button>
+														</div>
+
+														<div className="modal-body">Modal body..</div>
+
+														<div className="modal-footer">
+															<button
+																type="button"
+																className="btn btn-secondary"
+																data-dismiss="modal">
+																Close
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</td>
 								</tr>
