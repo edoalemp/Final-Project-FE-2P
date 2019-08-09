@@ -24,7 +24,7 @@ export class Stations extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.getonestation(
-														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
 															store.stations[stationi].id,
 														store.stations[stationi].id
 													)
@@ -37,7 +37,7 @@ export class Stations extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.deletestation(
-														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
 															store.stations[stationi].id,
 														store.stations[stationi].id
 													)

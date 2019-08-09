@@ -23,7 +23,7 @@ export class Measures extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.getstationwithmeasure(
-														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
 															store.measures[measurei].id +
 															"/stations",
 														store.measures[measurei].id
@@ -37,7 +37,7 @@ export class Measures extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.deletemeasure(
-														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
 															store.measures[measurei].id,
 														store.measures[measurei].id
 													)
