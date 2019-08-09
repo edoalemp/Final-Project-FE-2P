@@ -31,7 +31,7 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							stations: data
 						});
-						fetch("https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -155,7 +155,7 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							measures: data
 						});
-						fetch("https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/stations", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -272,7 +272,7 @@ const getState = ({ getStore, setStore }) => {
 							assignedmeasurestype: data
 						});
 						fetch(
-							"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures/" + measureid,
+							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" + measureid,
 							{
 								method: "GET",
 								headers: {
