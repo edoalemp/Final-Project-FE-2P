@@ -57,7 +57,7 @@ export class Measures extends React.Component {
 												<div className="modal-dialog modal-lg">
 													<div className="modal-content">
 														<div className="modal-header">
-															<h4 className="modal-title">Modal Heading</h4>
+															<h4 className="modal-title">Editar datos de medida</h4>
 															<button
 																type="button"
 																className="close"
@@ -71,9 +71,15 @@ export class Measures extends React.Component {
 														<div className="modal-footer">
 															<button
 																type="button"
-																className="btn btn-secondary"
+																className="btn btn-primary"
 																data-dismiss="modal">
-																Close
+																Modificar &#10003;
+															</button>
+															<button
+																type="button"
+																className="btn btn-primary"
+																data-dismiss="modal">
+																Cancelar &times;
 															</button>
 														</div>
 													</div>
@@ -104,7 +110,7 @@ export class Measures extends React.Component {
 											<div className="modal-dialog modal-lg">
 												<div className="modal-content">
 													<div className="modal-header">
-														<h4 className="modal-title">Modal Heading</h4>
+														<h4 className="modal-title">Agregar variable</h4>
 														<button type="button" className="close" data-dismiss="modal">
 															&times;
 														</button>
@@ -115,9 +121,15 @@ export class Measures extends React.Component {
 													<div className="modal-footer">
 														<button
 															type="button"
-															className="btn btn-secondary"
+															className="btn btn-primary"
 															data-dismiss="modal">
-															Close
+															Agregar &#10003;
+														</button>
+														<button
+															type="button"
+															className="btn btn-primary"
+															data-dismiss="modal">
+															Cancelar &times;
 														</button>
 													</div>
 												</div>
