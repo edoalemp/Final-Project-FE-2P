@@ -76,7 +76,7 @@ export class StationId extends React.Component {
 										<tr key={i}>
 											<td className="py-1">{store.assignedmeasuresof[i].id}</td>
 											<td className="py-1">{store.measures[j].name}</td>
-											<td className="py-1">32</td>
+											<td className="py-1">xx</td>
 											<td className="py-1">{store.measures[j].unit}</td>
 											<td className="p-0">
 												<div

@@ -7,9 +7,11 @@ const getState = ({ getStore, setStore }) => {
 			oneperson: {},
 			organizations: [],
 			oneorganization: {},
+			measure: [],
 			measures: [],
 			onemeasure: {},
 			assignedmeasures: [],
+			assignedmeasurestype: [],
 			assignedmeasuresof: []
 		},
 		actions: {
@@ -111,7 +113,7 @@ const getState = ({ getStore, setStore }) => {
 							onestation: data
 						});
 
-						fetch(urlstring + "/assignedmeasures", {
+						fetch(urlstring + "/measures", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -253,9 +255,28 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//12. Trae lista con medidas asignadas de un tipo
+			//12. Trae lista de estaciones con medidas asignadas de un tipo (OK)
 
-			getmeasurestype: urlstring => {},
+			getstationwithmeasure: urlstring => {
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							assignedmeasurestype: data
+						});
+						console.log(data);
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
 
 			//13. Trae lista con medidas asignadas a una estación (OK)
 

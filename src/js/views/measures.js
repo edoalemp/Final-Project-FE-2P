@@ -12,16 +12,22 @@ export class Measures extends React.Component {
 						for (let measurei = 0; measurei <= store.measures.length - 1; measurei++) {
 							arrayhtml.push(
 								<tr key={measurei}>
-									<td className="py-1">{store.measures[measurei]["id"]}</td>
-									<td className="py-1">{store.measures[measurei]["name"]}</td>
-									<td className="py-1">{store.measures[measurei]["unit"]}</td>
+									<td className="py-1">{store.measures[measurei].id}</td>
+									<td className="py-1">{store.measures[measurei].name}</td>
+									<td className="py-1">{store.measures[measurei].unit}</td>
 									<td className="p-0">
 										<div className="btn-group d-flex py-0" role="group" aria-label="buttons group">
 											<Link
 												to="/mediciones/id"
 												role="button"
 												className="btn btn-primary w-100 py-1"
-												onClick={() => actions.getstationswithmeasure()}>
+												onClick={() =>
+													actions.getstationwithmeasure(
+														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures/" +
+															store.measures[measurei].id +
+															"/stations"
+													)
+												}>
 												Detalle
 											</Link>
 											<Link
