@@ -16,15 +16,15 @@ export class MeasureId extends React.Component {
 									<tbody>
 										<tr>
 											<th className="w-20 py-1" scope="col">
-												{store.measure.name}
+												Variable
 											</th>
 											<td className="w-80 py-1" scope="col">
-												{store.measure.unit}
+												{store.measure.name}
 											</td>
 										</tr>
 										<tr>
 											<th className="py-1">Unidad</th>
-											<td className="py-1">Pascal</td>
+											<td className="py-1">{store.measure.unit}</td>
 										</tr>
 									</tbody>
 								</table>
