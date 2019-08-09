@@ -25,7 +25,8 @@ export class Measures extends React.Component {
 													actions.getstationwithmeasure(
 														"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures/" +
 															store.measures[measurei].id +
-															"/stations"
+															"/stations",
+														store.measures[measurei].id
 													)
 												}>
 												Detalle

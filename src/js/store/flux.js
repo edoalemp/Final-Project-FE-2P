@@ -257,7 +257,7 @@ const getState = ({ getStore, setStore }) => {
 
 			//12. Trae lista de estaciones con medidas asignadas de un tipo (OK)
 
-			getstationwithmeasure: urlstring => {
+			getstationwithmeasure: (urlstring, measureid) => {
 				fetch(urlstring, {
 					method: "GET",
 					headers: {
@@ -271,6 +271,25 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							assignedmeasurestype: data
 						});
+						fetch(
+							"https://3000-e731c6f5-46e3-46c2-900c-92b03ab5174e.ws-us0.gitpod.io/measures/" + measureid,
+							{
+								method: "GET",
+								headers: {
+									"Content-Type": "application/json"
+								}
+							}
+						)
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measure: data
+								});
+								console.log(data);
+							});
+
 						console.log(data);
 					})
 					.catch(error => {
