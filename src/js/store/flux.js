@@ -86,7 +86,26 @@ const getState = ({ getStore, setStore }) => {
 
 			//3. edita una estación
 
-			editstation: urlstring => {},
+			editstation: (urlstring, datastation) => {
+				fetch(urlstring, {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: datastation
+				})
+					.then(resp => {
+						console.log(resp.status);
+
+						setStore({
+							onestation: datastation
+						});
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
 
 			//4. borra una estación (OK)
 
@@ -119,7 +138,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//5. Trae una estación y edita(pendiente)
+			//5. Trae una estación (ok)
 
 			getonestation: (urlstring, stationid) => {
 				fetch(urlstring, {
@@ -227,7 +246,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//8. Trae una medida y edita (pendiente)
+			//8. Trae una medida (ok)
 
 			getonemeasure: (urlstring, measureid) => {
 				fetch(urlstring, {

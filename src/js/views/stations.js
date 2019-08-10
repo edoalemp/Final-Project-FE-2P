@@ -73,7 +73,23 @@ export class Stations extends React.Component {
 															</button>
 														</div>
 														<div className="modal-body">
-															<form>
+															<form
+																onSubmit={event => {
+																	event.preventDefault();
+																	const data = new FormData(event.target);
+
+																	var object = {};
+																	data.forEach(function(value, id) {
+																		object[id] = value;
+																	});
+																	var json = JSON.stringify(object);
+
+																	actions.editstation(
+																		"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+																			store.stations[stationi].id,
+																		json
+																	);
+																}}>
 																<div className="form-group">
 																	<label htmlFor="name">Nombre de estación</label>
 																	<input
@@ -134,21 +150,21 @@ export class Stations extends React.Component {
 																		name="description"
 																	/>
 																</div>
+																<div className="modal-footer">
+																	<button className="btn btn-primary">
+																		Modificar &#10003;
+																	</button>
+																	<button type="reset" className="btn btn-primary">
+																		Cancelar
+																	</button>
+																	<button
+																		type="button"
+																		className="btn btn-primary"
+																		data-dismiss="modal">
+																		Cerrar &times;
+																	</button>
+																</div>
 															</form>
-														</div>
-														<div className="modal-footer">
-															<button
-																type="button"
-																className="btn btn-primary"
-																data-dismiss="modal">
-																Modificar &#10003;
-															</button>
-															<button
-																type="button"
-																className="btn btn-primary"
-																data-dismiss="modal">
-																Cancelar &times;
-															</button>
 														</div>
 													</div>
 												</div>
