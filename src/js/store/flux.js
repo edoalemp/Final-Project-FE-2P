@@ -303,9 +303,33 @@ const getState = ({ getStore, setStore }) => {
 
 			//10. Asigna una medida a una estación
 
+			editmeasure: (urlstring, datameasure) => {
+				console.log("!!");
+				fetch(urlstring, {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: datameasure
+				})
+					.then(resp => {
+						console.log(resp.status);
+
+						setStore({
+							onemeasure: datameasure
+						});
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			//11. Asigna una medida a una estación
+
 			addmeasureto: urlstring => {},
 
-			//11. Borra una medida asignada a una estación (OK)
+			//12. Borra una medida asignada a una estación (OK)
 
 			deletemeasurefrom: (urlstring, assignedmeasuresid) => {
 				let tempstore = getStore();
@@ -336,7 +360,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//12. Trae lista de estaciones con medidas asignadas de un tipo (OK)
+			//13. Trae lista de estaciones con medidas asignadas de un tipo (OK)
 
 			getstationwithmeasure: (urlstring, measureid) => {
 				fetch(urlstring, {
@@ -378,7 +402,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//13. Trae lista con medidas asignadas a una estación (OK)
+			//14. Trae lista con medidas asignadas a una estación (OK)
 
 			getmeasuresfrom: urlstring => {
 				fetch(urlstring, {
