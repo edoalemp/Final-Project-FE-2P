@@ -301,7 +301,10 @@ export class Stations extends React.Component {
 																<button className="btn btn-primary">
 																	Agregar &#10003;
 																</button>
-																<button type="reset" className="btn btn-primary">
+																<button
+																	type="reset"
+																	className="btn btn-primary"
+																	data-dismiss="modal">
 																	Cancelar
 																</button>
 																<button
