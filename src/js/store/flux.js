@@ -84,7 +84,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//3. edita una estación
+			//3. edita una estación (OK)
 
 			editstation: (urlstring, datastation) => {
 				fetch(urlstring, {
