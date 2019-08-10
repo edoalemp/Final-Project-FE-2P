@@ -113,7 +113,40 @@ export class Stations extends React.Component {
 														</button>
 													</div>
 
-													<div className="modal-body">Modal body..</div>
+													<div className="modal-body">
+														<form>
+															<div className="form-group">
+																<label htmlFor="text">Nombre de estación</label>
+																<input
+																	type="text"
+																	className="form-control"
+																	id="text"
+																	placeholder="Estación"
+																	name="station"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="lattitude">Latitud</label>
+																<input
+																	type="text"
+																	className="form-control"
+																	id="lattitude"
+																	placeholder="Latitud"
+																	name="latittude"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="longitude">Longitud</label>
+																<input
+																	type="text"
+																	className="form-control"
+																	id="longitude"
+																	placeholder="longitud"
+																	name="longitude"
+																/>
+															</div>
+														</form>
+													</div>
 
 													<div className="modal-footer">
 														<button
