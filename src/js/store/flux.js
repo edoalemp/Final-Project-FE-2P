@@ -3,13 +3,17 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			stations: [],
 			onestation: {},
+
 			persons: [],
 			oneperson: {},
+
 			organizations: [],
 			oneorganization: {},
+
 			measure: [],
 			measures: [],
 			onemeasure: {},
+
 			assignedmeasures: [],
 			assignedmeasurestype: [],
 			assignedmeasuresof: []
@@ -57,9 +61,28 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//2. Agrega una estación
+			//2. Agrega una estación (OK)
 
-			addstation: urlstring => {},
+			addstation: (urlstring, datastation) => {
+				fetch(urlstring, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: datastation
+				})
+					.then(resp => {
+						console.log(resp.status);
+
+						setStore({
+							onestation: datastation
+						});
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
 
 			//3. edita una estación
 
@@ -96,7 +119,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//5. Trae una estación (OK)
+			//5. Trae una estación y edita(pendiente)
 
 			getonestation: (urlstring, stationid) => {
 				fetch(urlstring, {
@@ -181,13 +204,52 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//7. Agrega un tipo de medida
+			//7. Agrega un tipo de medida (OK)
 
-			addmeasure: urlstring => {},
+			addmeasure: (urlstring, datameasure) => {
+				fetch(urlstring, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: datameasure
+				})
+					.then(resp => {
+						console.log(resp.status);
 
-			//8. Edita un tipo de medida
+						setStore({
+							onemeasure: datameasure
+						});
+					})
 
-			editmeasure: urlstring => {},
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			//8. Trae una medida y edita (pendiente)
+
+			getonemeasure: (urlstring, measureid) => {
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							onemeasure: data
+						});
+
+						console.log(data);
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
 
 			//9. Borra un tipo de medida (OK)
 

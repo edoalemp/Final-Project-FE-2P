@@ -48,12 +48,19 @@ export class Measures extends React.Component {
 												to="#"
 												role="button"
 												className="btn btn-primary w-100 py-1"
+												onClick={() =>
+													actions.getonemeasure(
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
+															store.measures[measurei].id,
+														store.measures[measurei].id
+													)
+												}
 												data-toggle="modal"
-												data-target="#myModal">
+												data-target="#editmeasure">
 												Editar
 											</Link>
 
-											<div className="modal fade" id="myModal">
+											<div className="modal fade" id="editmeasure">
 												<div className="modal-dialog modal-lg">
 													<div className="modal-content">
 														<div className="modal-header">
@@ -66,7 +73,40 @@ export class Measures extends React.Component {
 															</button>
 														</div>
 
-														<div className="modal-body">Modal body..</div>
+														<div className="modal-body">
+															<form>
+																<div className="form-group">
+																	<label htmlFor="name">Nombre de medida</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="name"
+																		placeholder={store.onemeasure.name}
+																		name="name"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="unit">Unidad</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="unit"
+																		placeholder={store.onemeasure.unit}
+																		name="unit"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="symbol">Símbolo</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="symbol"
+																		placeholder={store.onemeasure.symbol}
+																		name="symbol"
+																	/>
+																</div>
+															</form>
+														</div>
 
 														<div className="modal-footer">
 															<button
@@ -104,33 +144,81 @@ export class Measures extends React.Component {
 											className="btn btn-primary w-100"
 											data-toggle="modal"
 											data-target="#myModal">
-											Agregar variable
+											Agregar medida
 										</Link>
 										<div className="modal fade" id="myModal">
 											<div className="modal-dialog modal-lg">
 												<div className="modal-content">
 													<div className="modal-header">
-														<h4 className="modal-title">Agregar variable</h4>
+														<h4 className="modal-title">Agregar medida</h4>
 														<button type="button" className="close" data-dismiss="modal">
 															&times;
 														</button>
 													</div>
 
-													<div className="modal-body">Modal body..</div>
+													<div className="modal-body">
+														<form
+															onSubmit={event => {
+																event.preventDefault();
+																const data = new FormData(event.target);
 
-													<div className="modal-footer">
-														<button
-															type="button"
-															className="btn btn-primary"
-															data-dismiss="modal">
-															Agregar &#10003;
-														</button>
-														<button
-															type="button"
-															className="btn btn-primary"
-															data-dismiss="modal">
-															Cancelar &times;
-														</button>
+																var object = {};
+																data.forEach(function(value, id) {
+																	object[id] = value;
+																});
+																var json = JSON.stringify(object);
+
+																actions.addstation(
+																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures",
+																	json
+																);
+															}}>
+															<div className="form-group">
+																<label htmlFor="name">Nombre de medida</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="name"
+																	placeholder="Medida"
+																	name="name"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="unit">Unidad</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="unit"
+																	placeholder="Unidad"
+																	name="unit"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="symbol">Símbolo</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="symbol"
+																	placeholder="Símbolo"
+																	name="symbol"
+																/>
+															</div>
+
+															<div className="modal-footer">
+																<button className="btn btn-primary">
+																	Agregar &#10003;
+																</button>
+																<button type="reset" className="btn btn-primary">
+																	Cancelar
+																</button>
+																<button
+																	type="button"
+																	className="btn btn-primary"
+																	data-dismiss="modal">
+																	Cerrar &times;
+																</button>
+															</div>
+														</form>
 													</div>
 												</div>
 											</div>

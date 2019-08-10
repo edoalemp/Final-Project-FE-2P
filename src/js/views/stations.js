@@ -8,7 +8,6 @@ export class Stations extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					let arrayhtml = [];
-
 					if (store.stations.length > 0) {
 						for (let stationi = 0; stationi <= store.stations.length - 1; stationi++) {
 							arrayhtml.push(
@@ -57,11 +56,11 @@ export class Stations extends React.Component {
 													)
 												}
 												data-toggle="modal"
-												data-target="#addstation">
+												data-target="#editstation">
 												Editar
 											</Link>
 
-											<div className="modal fade" id="addstation">
+											<div className="modal fade" id="editstation">
 												<div className="modal-dialog modal-lg">
 													<div className="modal-content">
 														<div className="modal-header">
@@ -76,13 +75,13 @@ export class Stations extends React.Component {
 														<div className="modal-body">
 															<form>
 																<div className="form-group">
-																	<label htmlFor="text">Nombre de estación</label>
+																	<label htmlFor="name">Nombre de estación</label>
 																	<input
 																		type="text"
 																		className="form-control form-control-sm"
-																		id="text"
+																		id="name"
 																		placeholder={store.onestation.name}
-																		name="station"
+																		name="name"
 																	/>
 																</div>
 																<div className="form-group">
@@ -106,23 +105,23 @@ export class Stations extends React.Component {
 																	/>
 																</div>
 																<div className="form-group">
-																	<label htmlFor="street">Calle</label>
+																	<label htmlFor="streetaddress">Calle</label>
 																	<input
 																		type="text"
 																		className="form-control form-control-sm"
-																		id="street"
+																		id="streetaddress"
 																		placeholder={store.onestation.streetaddress}
-																		name="street"
+																		name="streetaddress"
 																	/>
 																</div>
 																<div className="form-group">
-																	<label htmlFor="number">Número</label>
+																	<label htmlFor="numberaddress">Número</label>
 																	<input
 																		type="text"
 																		className="form-control form-control-sm"
-																		id="number"
+																		id="numberaddress"
 																		placeholder={store.onestation.numberaddress}
-																		name="number"
+																		name="numberaddress"
 																	/>
 																</div>
 																<div className="form-group">
@@ -186,15 +185,30 @@ export class Stations extends React.Component {
 													</div>
 
 													<div className="modal-body">
-														<form>
+														<form
+															onSubmit={event => {
+																event.preventDefault();
+																const data = new FormData(event.target);
+
+																var object = {};
+																data.forEach(function(value, id) {
+																	object[id] = value;
+																});
+																var json = JSON.stringify(object);
+
+																actions.addstation(
+																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations",
+																	json
+																);
+															}}>
 															<div className="form-group">
-																<label htmlFor="text">Nombre de estación</label>
+																<label htmlFor="name">Nombre de estación</label>
 																<input
 																	type="text"
 																	className="form-control form-control-sm"
-																	id="text"
+																	id="name"
 																	placeholder="Estación"
-																	name="station"
+																	name="name"
 																/>
 															</div>
 															<div className="form-group">
@@ -204,7 +218,7 @@ export class Stations extends React.Component {
 																	className="form-control form-control-sm"
 																	id="lattitude"
 																	placeholder="Latitud"
-																	name="latittude"
+																	name="lattitude"
 																/>
 															</div>
 															<div className="form-group">
@@ -218,23 +232,23 @@ export class Stations extends React.Component {
 																/>
 															</div>
 															<div className="form-group">
-																<label htmlFor="street">Calle</label>
+																<label htmlFor="streetaddress">Calle</label>
 																<input
 																	type="text"
 																	className="form-control form-control-sm"
-																	id="street"
+																	id="streetaddress"
 																	placeholder="Calle"
-																	name="street"
+																	name="streetaddress"
 																/>
 															</div>
 															<div className="form-group">
-																<label htmlFor="number">Número</label>
+																<label htmlFor="numberaddress">Número</label>
 																<input
 																	type="text"
 																	className="form-control form-control-sm"
-																	id="number"
+																	id="numberaddress"
 																	placeholder="Número"
-																	name="number"
+																	name="numberaddress"
 																/>
 															</div>
 															<div className="form-group">
@@ -247,22 +261,41 @@ export class Stations extends React.Component {
 																	name="description"
 																/>
 															</div>
+															<div className="form-group">
+																<label htmlFor="person_id">Responsable</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="person_id"
+																	placeholder="Nombre"
+																	name="person_id"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="organization_id">Organización</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="organization_id"
+																	placeholder="Nombre"
+																	name="organization_id"
+																/>
+															</div>
+															<div className="modal-footer">
+																<button className="btn btn-primary">
+																	Agregar &#10003;
+																</button>
+																<button type="reset" className="btn btn-primary">
+																	Cancelar
+																</button>
+																<button
+																	type="button"
+																	className="btn btn-primary"
+																	data-dismiss="modal">
+																	Cerrar &times;
+																</button>
+															</div>
 														</form>
-													</div>
-
-													<div className="modal-footer">
-														<button
-															type="button"
-															className="btn btn-primary"
-															data-dismiss="modal">
-															Agregar &#10003;
-														</button>
-														<button
-															type="button"
-															className="btn btn-primary"
-															data-dismiss="modal">
-															Cancelar &times;
-														</button>
 													</div>
 												</div>
 											</div>
