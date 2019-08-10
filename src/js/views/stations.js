@@ -8,14 +8,15 @@ export class Stations extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					let arrayhtml = [];
+
 					if (store.stations.length > 0) {
 						for (let stationi = 0; stationi <= store.stations.length - 1; stationi++) {
 							arrayhtml.push(
 								<tr key={stationi}>
-									<td className="py-1">{store.stations[stationi]["id"]}</td>
-									<td className="py-1">{store.stations[stationi]["name"]}</td>
-									<td className="py-1">{store.stations[stationi]["lattitude"]}</td>
-									<td className="py-1">{store.stations[stationi]["longitude"]}</td>
+									<td className="py-1">{store.stations[stationi].id}</td>
+									<td className="py-1">{store.stations[stationi].name}</td>
+									<td className="py-1">{store.stations[stationi].lattitude}</td>
+									<td className="py-1">{store.stations[stationi].longitude}</td>
 									<td className="p-0">
 										<div className="btn-group d-flex py-0" role="group" aria-label="buttons group">
 											<Link
@@ -48,11 +49,19 @@ export class Stations extends React.Component {
 												to="#"
 												role="button"
 												className="btn btn-primary w-100 py-1"
+												onClick={() =>
+													actions.getonestation(
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+															store.stations[stationi].id,
+														store.stations[stationi].id
+													)
+												}
 												data-toggle="modal"
-												data-target="#myModal">
+												data-target="#addstation">
 												Editar
 											</Link>
-											<div className="modal fade" id="myModal">
+
+											<div className="modal fade" id="addstation">
 												<div className="modal-dialog modal-lg">
 													<div className="modal-content">
 														<div className="modal-header">
@@ -64,7 +73,70 @@ export class Stations extends React.Component {
 																&times;
 															</button>
 														</div>
-														<div className="modal-body">Modal body..</div>
+														<div className="modal-body">
+															<form>
+																<div className="form-group">
+																	<label htmlFor="text">Nombre de estación</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="text"
+																		placeholder={store.onestation.name}
+																		name="station"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="lattitude">Latitud</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="lattitude"
+																		placeholder={store.onestation.lattitude}
+																		name="latittude"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="longitude">Longitud</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="longitude"
+																		placeholder={store.onestation.longitude}
+																		name="longitude"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="street">Calle</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="street"
+																		placeholder={store.onestation.streetaddress}
+																		name="street"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="number">Número</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="number"
+																		placeholder={store.onestation.numberaddress}
+																		name="number"
+																	/>
+																</div>
+																<div className="form-group">
+																	<label htmlFor="description">Descripción</label>
+																	<input
+																		type="text"
+																		className="form-control form-control-sm"
+																		id="description"
+																		placeholder={store.onestation.description}
+																		name="description"
+																	/>
+																</div>
+															</form>
+														</div>
 														<div className="modal-footer">
 															<button
 																type="button"
@@ -119,7 +191,7 @@ export class Stations extends React.Component {
 																<label htmlFor="text">Nombre de estación</label>
 																<input
 																	type="text"
-																	className="form-control"
+																	className="form-control form-control-sm"
 																	id="text"
 																	placeholder="Estación"
 																	name="station"
@@ -129,7 +201,7 @@ export class Stations extends React.Component {
 																<label htmlFor="lattitude">Latitud</label>
 																<input
 																	type="text"
-																	className="form-control"
+																	className="form-control form-control-sm"
 																	id="lattitude"
 																	placeholder="Latitud"
 																	name="latittude"
@@ -139,10 +211,40 @@ export class Stations extends React.Component {
 																<label htmlFor="longitude">Longitud</label>
 																<input
 																	type="text"
-																	className="form-control"
+																	className="form-control form-control-sm"
 																	id="longitude"
-																	placeholder="longitud"
+																	placeholder="Longitud"
 																	name="longitude"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="street">Calle</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="street"
+																	placeholder="Calle"
+																	name="street"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="number">Número</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="number"
+																	placeholder="Número"
+																	name="number"
+																/>
+															</div>
+															<div className="form-group">
+																<label htmlFor="description">Descripción</label>
+																<input
+																	type="text"
+																	className="form-control form-control-sm"
+																	id="description"
+																	placeholder="Descripción"
+																	name="description"
 																/>
 															</div>
 														</form>
