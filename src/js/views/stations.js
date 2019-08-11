@@ -83,10 +83,11 @@ export class Stations extends React.Component {
 																		object[id] = value;
 																	});
 																	var json = JSON.stringify(object);
-
+																	console.log(json);
+																	console.log(store.stations[stationi].id);
 																	actions.editstation(
 																		"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
-																			store.stations[stationi].id,
+																			store.onestation.id,
 																		json
 																	);
 																}}>
@@ -107,7 +108,7 @@ export class Stations extends React.Component {
 																		className="form-control form-control-sm"
 																		id="lattitude"
 																		placeholder={store.onestation.lattitude}
-																		name="latittude"
+																		name="lattitude"
 																	/>
 																</div>
 																<div className="form-group">

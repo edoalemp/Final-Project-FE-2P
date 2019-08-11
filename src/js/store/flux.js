@@ -19,7 +19,7 @@ const getState = ({ getStore, setStore }) => {
 			assignedmeasuresof: []
 		},
 		actions: {
-			//1. trae lista de estaciones (OK)
+			//1. trae lista de estaciones (OK!)
 
 			getstations: urlstring => {
 				fetch(urlstring, {
@@ -61,7 +61,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//2. Agrega una estación (OK)
+			//2. Agrega una estación (OK!)
 
 			addstation: (urlstring, datastation) => {
 				fetch(urlstring, {
@@ -74,9 +74,25 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						setStore({
-							onestation: datastation
-						});
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									stations: data
+								});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
 					})
 
 					.catch(error => {
@@ -84,7 +100,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//3. edita una estación (OK)
+			//3. edita una estación (OK!)
 
 			editstation: (urlstring, datastation) => {
 				fetch(urlstring, {
@@ -97,17 +113,32 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						setStore({
-							onestation: datastation
-						});
-					})
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									stations: data
+								});
 
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+					})
 					.catch(error => {
 						console.log(error);
 					});
 			},
 
-			//4. borra una estación (OK)
+			//4. borra una estación (OK!)
 
 			deletestation: (urlstring, stationid) => {
 				let tempstore = getStore();
@@ -120,17 +151,25 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(resp => {
 						console.log(resp.status);
-						if (resp.status === 200) {
-							for (let i = 0; i <= tempstore.stations.length - 1; i++) {
-								if (tempstore.stations[i].id === stationid) {
-									tempstore.stations.splice(i, 1);
-									break;
-								}
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
 							}
-						}
-						setStore({
-							stations: tempstore.stations
-						});
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									stations: data
+								});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
 					})
 
 					.catch(error => {
@@ -138,7 +177,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//5. Trae una estación (ok)
+			//5. Trae una estación (ok!)
 
 			getonestation: (urlstring, stationid) => {
 				fetch(urlstring, {
@@ -151,6 +190,7 @@ const getState = ({ getStore, setStore }) => {
 						return resp.json();
 					})
 					.then(data => {
+						console.log(data);
 						setStore({
 							onestation: data
 						});
@@ -305,6 +345,7 @@ const getState = ({ getStore, setStore }) => {
 
 			editmeasure: (urlstring, datameasure) => {
 				console.log("!!");
+				console.log(datameasure);
 				fetch(urlstring, {
 					method: "PUT",
 					headers: {
@@ -329,7 +370,7 @@ const getState = ({ getStore, setStore }) => {
 
 			addmeasureto: urlstring => {},
 
-			//12. Borra una medida asignada a una estación (OK)
+			//12. Borra una medida asignada a una estación (pendiente)
 
 			deletemeasurefrom: (urlstring, assignedmeasuresid) => {
 				let tempstore = getStore();

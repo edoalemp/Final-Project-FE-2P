@@ -75,6 +75,7 @@ export class Measures extends React.Component {
 
 														<div className="modal-body">
 															<form
+																id="editmeasure"
 																onSubmit={event => {
 																	event.preventDefault();
 																	const data = new FormData(event.target);
@@ -126,7 +127,7 @@ export class Measures extends React.Component {
 																		Modificar &#10003;
 																	</button>
 																	<button type="reset" className="btn btn-primary">
-																		Cancelar
+																		Limpiar
 																	</button>
 																	<button
 																		type="button"
@@ -173,6 +174,7 @@ export class Measures extends React.Component {
 
 													<div className="modal-body">
 														<form
+															id="addmeasureform"
 															onSubmit={event => {
 																event.preventDefault();
 																const data = new FormData(event.target);
@@ -220,11 +222,11 @@ export class Measures extends React.Component {
 															</div>
 
 															<div className="modal-footer">
-																<button className="btn btn-primary">
+																<button type="submit" className="btn btn-primary">
 																	Agregar &#10003;
 																</button>
 																<button type="reset" className="btn btn-primary">
-																	Cancelar
+																	Limpiar
 																</button>
 																<button
 																	type="button"
