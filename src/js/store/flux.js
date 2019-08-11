@@ -1,8 +1,8 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			stations: [],
-			onestation: {},
+			stations: [], //
+			onestation: {}, //
 
 			persons: [],
 			oneperson: {},
@@ -11,12 +11,12 @@ const getState = ({ getStore, setStore }) => {
 			oneorganization: {},
 
 			measure: [],
-			measures: [],
-			onemeasure: {},
+			measures: [], //
+			onemeasure: {}, //
 
 			assignedmeasures: [],
 			assignedmeasurestype: [],
-			assignedmeasuresof: []
+			assignedmeasuresof: [] //
 		},
 		actions: {
 			//1. trae lista de estaciones (OK!)
@@ -221,7 +221,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//6. Trae lista con los tipos de medida (OK)
+			//6. Trae lista con los tipos de medida (OK!)
 
 			getmeasures: urlstring => {
 				fetch(urlstring, {
@@ -263,7 +263,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//7. Agrega un tipo de medida (OK)
+			//7. Agrega un tipo de medida (OK!)
 
 			addmeasure: (urlstring, datameasure) => {
 				fetch(urlstring, {
@@ -276,9 +276,25 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						setStore({
-							onemeasure: datameasure
-						});
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measures: data
+								});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
 					})
 
 					.catch(error => {
@@ -310,7 +326,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//9. Borra un tipo de medida (OK)
+			//9. Borra un tipo de medida (OK!)
 
 			deletemeasure: (urlstring, measureid) => {
 				let tempstore = getStore();
@@ -322,18 +338,25 @@ const getState = ({ getStore, setStore }) => {
 					}
 				})
 					.then(resp => {
-						console.log(resp.status);
-						if (resp.status === 200) {
-							for (let i = 0; i <= tempstore.measures.length - 1; i++) {
-								if (tempstore.measures[i].id === measureid) {
-									tempstore.measures.splice(i, 1);
-									break;
-								}
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
 							}
-						}
-						setStore({
-							measures: tempstore.measures
-						});
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measures: data
+								});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
 					})
 
 					.catch(error => {
@@ -341,7 +364,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//10. Asigna una medida a una estación
+			//10. Edita un tipo de medida (OK!)
 
 			editmeasure: (urlstring, datameasure) => {
 				console.log("!!");
@@ -356,9 +379,23 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						setStore({
-							onemeasure: datameasure
-						});
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measures: data
+								});
+							})
+							.catch(error => {
+								console.log(error);
+							});
 					})
 
 					.catch(error => {
@@ -401,7 +438,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//13. Trae lista de estaciones con medidas asignadas de un tipo (OK)
+			//13. Trae lista de estaciones con medidas asignadas de un tipo (OK!)
 
 			getstationwithmeasure: (urlstring, measureid) => {
 				fetch(urlstring, {
@@ -443,7 +480,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//14. Trae lista con medidas asignadas a una estación (OK)
+			//14. Trae lista con medidas asignadas a una estación (OK!)
 
 			getmeasuresfrom: urlstring => {
 				fetch(urlstring, {

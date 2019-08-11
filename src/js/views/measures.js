@@ -72,10 +72,8 @@ export class Measures extends React.Component {
 																&times;
 															</button>
 														</div>
-
 														<div className="modal-body">
 															<form
-																id="editmeasure"
 																onSubmit={event => {
 																	event.preventDefault();
 																	const data = new FormData(event.target);
@@ -88,7 +86,7 @@ export class Measures extends React.Component {
 																	console.log(json);
 																	actions.editmeasure(
 																		"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
-																			store.measures[measurei].id,
+																			store.onemeasure.id,
 																		json
 																	);
 																}}>
@@ -185,7 +183,7 @@ export class Measures extends React.Component {
 																});
 																var json = JSON.stringify(object);
 
-																actions.addstation(
+																actions.addmeasure(
 																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures",
 																	json
 																);
