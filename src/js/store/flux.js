@@ -403,7 +403,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//11. Asigna una medida a una estación
+			//11. Asigna una medida a una estación (pendiente)
 
 			addmeasureto: urlstring => {},
 
