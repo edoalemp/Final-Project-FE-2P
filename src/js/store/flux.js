@@ -1,8 +1,9 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			stations: [], //
-			onestation: {}, //
+			stations: [],
+			stationswithmeasure: [],
+			onestation: {},
 
 			persons: [],
 			oneperson: {},
@@ -10,12 +11,12 @@ const getState = ({ getStore, setStore }) => {
 			organizations: [],
 			oneorganization: {},
 
-			measure: [],
+			measuretype: {},
 			measures: [], //
 			onemeasure: {}, //
 
 			assignedmeasures: [],
-			assignedmeasurestype: [],
+			//assignedmeasurestype: [],
 			assignedmeasuresof: [] //
 		},
 		actions: {
@@ -85,7 +86,7 @@ const getState = ({ getStore, setStore }) => {
 							})
 							.then(data => {
 								setStore({
-									stations: data
+									stationswithmeasure: data
 								});
 
 								console.log(data);
@@ -302,7 +303,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//8. Trae una medida (ok)
+			//8. Trae una medida (OK)
 
 			getonemeasure: (urlstring, measureid) => {
 				fetch(urlstring, {
@@ -405,9 +406,11 @@ const getState = ({ getStore, setStore }) => {
 
 			//11. Asigna una medida a una estación (pendiente)
 
-			addmeasureto: urlstring => {},
+			addmeasureto: (urlstring, data) => {
+				console.log(data);
+			},
 
-			//12. Borra una medida asignada a una estación (pendiente)
+			//12. Borra una medida asignada a una estación (OK!)
 
 			deletemeasurefrom: (urlstring, assignedmeasuresid) => {
 				let tempstore = getStore();
@@ -420,6 +423,7 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(resp => {
 						console.log(resp.status);
+
 						if (resp.status === 200) {
 							for (let i = 0; i <= tempstore.assignedmeasuresof.length - 1; i++) {
 								if (tempstore.assignedmeasuresof[i].id === assignedmeasuresid) {
@@ -440,7 +444,7 @@ const getState = ({ getStore, setStore }) => {
 
 			//13. Trae lista de estaciones con medidas asignadas de un tipo (OK!)
 
-			getstationwithmeasure: (urlstring, measureid) => {
+			getstationswithmeasure: (urlstring, measureid) => {
 				fetch(urlstring, {
 					method: "GET",
 					headers: {
@@ -452,7 +456,7 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.then(data => {
 						setStore({
-							assignedmeasurestype: data
+							assignedmeasuresof: data
 						});
 						fetch(
 							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" + measureid,
@@ -468,7 +472,7 @@ const getState = ({ getStore, setStore }) => {
 							})
 							.then(data => {
 								setStore({
-									measure: data
+									measuretype: data
 								});
 								console.log(data);
 							});
@@ -478,10 +482,10 @@ const getState = ({ getStore, setStore }) => {
 					.catch(error => {
 						console.log(error);
 					});
-			},
+			}
 
 			//14. Trae lista con medidas asignadas a una estación (OK!)
-
+			/*
 			getmeasuresfrom: urlstring => {
 				fetch(urlstring, {
 					method: "GET",
@@ -502,6 +506,7 @@ const getState = ({ getStore, setStore }) => {
 						console.log(error);
 					});
 			}
+            */
 		}
 	};
 };
