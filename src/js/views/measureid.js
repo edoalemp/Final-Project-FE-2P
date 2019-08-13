@@ -114,7 +114,7 @@ export class MeasureId extends React.Component {
 																var json = JSON.stringify(object);
 
 																actions.addmeasureto(
-																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures",
+																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures",
 																	json
 																);
 															}}>
