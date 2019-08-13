@@ -403,7 +403,78 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//11. Asigna una medida a una estación (pendiente)
+			//11. asigna estación a una medida (pendiente)
+
+			addstationto: (urlstring, assigndata) => {
+				let station_id = JSON.parse(assigndata).station_id;
+				fetch(urlstring, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: assigndata
+				})
+					.then(resp => {
+						console.log(resp.status);
+						//********/
+
+						fetch(
+							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" + station_id,
+							{
+								method: "GET",
+								headers: {
+									"Content-Type": "application/json"
+								}
+							}
+						)
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								console.log(data);
+								setStore({
+									onestation: data
+								});
+
+								fetch(
+									"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+										station_id +
+										"/measures",
+									{
+										method: "GET",
+										headers: {
+											"Content-Type": "application/json"
+										}
+									}
+								)
+									.then(resp => {
+										return resp.json();
+									})
+									.then(data => {
+										setStore({
+											assignedmeasuresof: data
+										});
+										console.log(data);
+									})
+									.catch(error => {
+										console.log(error);
+									});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+
+						//********/
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			//11. Asigna una medida a una estación (ok)
 
 			addmeasureto: (urlstring, assigndata) => {
 				let measure_id = JSON.parse(assigndata).measure_id;
