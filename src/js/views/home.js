@@ -7,8 +7,8 @@ export class Home extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					actions.getstations("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations");
-					actions.getmeasures("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures");
+					actions.getstations("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations");
+					actions.getmeasures("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures");
 					let arraystations = [
 						<option key="1" selected>
 							Escoger..

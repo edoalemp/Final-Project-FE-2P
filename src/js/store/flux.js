@@ -35,7 +35,7 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							stations: data //actualiza vista estaciones
 						});
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -74,7 +74,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -113,7 +113,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -151,7 +151,7 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(resp => {
 						console.log(resp.status);
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -237,7 +237,7 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							measures: data
 						});
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -276,7 +276,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -338,7 +338,7 @@ const getState = ({ getStore, setStore }) => {
 					}
 				})
 					.then(resp => {
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -379,7 +379,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => {
 						console.log(resp.status);
 
-						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures", {
 							method: "GET",
 							headers: {
 								"Content-Type": "application/json"
@@ -419,7 +419,7 @@ const getState = ({ getStore, setStore }) => {
 						//********/
 
 						fetch(
-							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" + station_id,
+							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/" + station_id,
 							{
 								method: "GET",
 								headers: {
@@ -437,7 +437,7 @@ const getState = ({ getStore, setStore }) => {
 								});
 
 								fetch(
-									"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+									"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/" +
 										station_id +
 										"/measures",
 									{
@@ -489,7 +489,7 @@ const getState = ({ getStore, setStore }) => {
 						console.log(resp.status);
 						//********/
 						fetch(
-							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
+							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures/" +
 								measure_id +
 								"/stations",
 							{
@@ -507,7 +507,7 @@ const getState = ({ getStore, setStore }) => {
 									assignedmeasuresof: data
 								});
 								fetch(
-									"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
+									"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures/" +
 										measure_id,
 									{
 										method: "GET",
@@ -589,7 +589,7 @@ const getState = ({ getStore, setStore }) => {
 							assignedmeasuresof: data
 						});
 						fetch(
-							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" + measureid,
+							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures/" + measureid,
 							{
 								method: "GET",
 								headers: {

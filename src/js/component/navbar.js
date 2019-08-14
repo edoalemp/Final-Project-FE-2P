@@ -37,7 +37,7 @@ export class Navbar extends React.Component {
 											className="nav-link"
 											onClick={() =>
 												actions.getstations(
-													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations"
+													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations"
 												)
 											}
 											to="/estaciones">
@@ -49,7 +49,7 @@ export class Navbar extends React.Component {
 											className="nav-link"
 											onClick={() =>
 												actions.getmeasures(
-													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures"
+													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures"
 												)
 											}
 											to="/mediciones">
