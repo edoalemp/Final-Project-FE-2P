@@ -614,7 +614,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//15. Trae lista con mediciones asignadas (pendiente)
+			//15. Trae lista con mediciones asignadas (OK)
 
 			getassignedmeasures: urlstring => {
 				fetch(urlstring, {
@@ -635,7 +635,11 @@ const getState = ({ getStore, setStore }) => {
 					.catch(error => {
 						console.log(error);
 					});
-			}
+			},
+
+			//16. Trae datos de medición
+
+			getdatameasure: urlstring => {}
 		}
 	};
 };
