@@ -403,7 +403,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//11. asigna estación a una medida (pendiente)
+			//11. asigna estación a una medida (OK!)
 
 			addstationto: (urlstring, assigndata) => {
 				let station_id = JSON.parse(assigndata).station_id;
@@ -474,7 +474,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//11. Asigna una medida a una estación (ok)
+			//12. Asigna una medida a una estación (OK)
 
 			addmeasureto: (urlstring, assigndata) => {
 				let measure_id = JSON.parse(assigndata).measure_id;
@@ -540,7 +540,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//12. Borra una medida asignada a una estación (OK!)
+			//13. Borra una medida asignada a una estación (OK!)
 
 			deletemeasurefrom: (urlstring, assignedmeasuresid) => {
 				let tempstore = getStore();
@@ -572,7 +572,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 
-			//13. Trae lista de estaciones con medidas asignadas de un tipo (OK!)
+			//14. Trae lista de estaciones con medidas asignadas de un tipo (OK!)
 
 			getstationswithmeasure: (urlstring, measureid) => {
 				fetch(urlstring, {
