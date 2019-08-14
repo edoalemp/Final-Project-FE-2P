@@ -4,11 +4,8 @@ import { Link } from "react-router-dom";
 export class Login extends React.Component {
 	sending(e) {
 		e.preventDefault();
-		window.open("/home", "_self", "", "false");
 
-		{
-			/*Aqui va envío de información*/
-		}
+		window.open("/home", "_self", "", "false");
 	}
 	render() {
 		return (

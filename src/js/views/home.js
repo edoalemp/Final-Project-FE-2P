@@ -7,31 +7,29 @@ export class Home extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					actions.getstations("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations");
-					actions.getmeasures("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/measures");
 					let arraystations = [
-						<option key="1" selected>
+						<option key="1" value="1" defaultValue="1">
 							Escoger..
 						</option>
 					];
 					if (store.stations.length > 0) {
 						for (let stationi = 0; stationi <= store.stations.length - 1; stationi++) {
 							arraystations.push(
-								<option value={stationi}>
+								<option key={stationi + 2} value={stationi + 2}>
 									id# {store.stations[stationi].id} {store.stations[stationi].name}
 								</option>
 							);
 						}
 					}
 					let arraymeasures = [
-						<option key="1" selected>
+						<option key="1" value="1" defaultValue="1">
 							Escoger..
 						</option>
 					];
 					if (store.measures.length > 0) {
 						for (let measuresi = 0; measuresi <= store.measures.length - 1; measuresi++) {
 							arraymeasures.push(
-								<option value={measuresi}>
+								<option key={measuresi + 2} value={measuresi + 2}>
 									id# {store.measures[measuresi].id} {store.measures[measuresi].name}
 								</option>
 							);
@@ -59,11 +57,22 @@ export class Home extends React.Component {
 																	Intervalo
 																</label>
 															</div>
-															<select className="custom-select" id="inputGroupSelect01">
-																<option selected>Escoger..</option>
-																<option value="1">Hora</option>
-																<option value="2">Semana</option>
-																<option value="3">Mes</option>
+															<select
+																className="custom-select"
+																id="inputGroupSelect01"
+																defaultValue="1">
+																<option key="1" value="1">
+																	Escoger..
+																</option>
+																<option key="2" value="2">
+																	Hora
+																</option>
+																<option key="3" value="3">
+																	Semana
+																</option>
+																<option key="4" value="4">
+																	Mes
+																</option>
 															</select>
 														</div>
 													</td>
@@ -141,7 +150,7 @@ export class Home extends React.Component {
 											</tr>
 											<tr>
 												<td className="py-1">N° de variables medidas</td>
-												<td className="py-1">10</td>
+												<td className="py-1">{store.assignedmeasures.length}</td>
 											</tr>
 										</tbody>
 									</table>
