@@ -22,12 +22,20 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			/**
-			 * EDIT THIS!
-			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
-			 * you should do your ajax requests or fetch api requests here
-			 **/
+			console.log("XX");
+			this.state.actions.getstations(
+				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations"
+			);
+			this.state.actions.getassignedmeasures(
+				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/assignedmeasures"
+			);
 		}
+
+		/**
+		 * EDIT THIS!
+		 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
+		 * you should do your ajax requests or fetch api requests here
+		 **/
 
 		render() {
 			// the initial value for the context its not null anymore, but the current state of this component,
