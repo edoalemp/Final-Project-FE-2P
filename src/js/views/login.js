@@ -7,6 +7,7 @@ export class Login extends React.Component {
 
 		window.open("/home", "_self", "", "false");
 	}
+
 	render() {
 		return (
 			<div className="container">
