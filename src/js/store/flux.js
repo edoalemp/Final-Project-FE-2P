@@ -12,11 +12,13 @@ const getState = ({ getStore, setStore }) => {
 			oneorganization: {},
 
 			measuretype: {},
-			measures: [], //
-			onemeasure: {}, //
+			measures: [],
+			onemeasure: {},
 
 			assignedmeasures: [],
-			assignedmeasuresof: [] //
+			assignedmeasuresof: [],
+
+			datameasure: {}
 		},
 		actions: {
 			//1. trae lista de estaciones (OK!)
@@ -640,7 +642,24 @@ const getState = ({ getStore, setStore }) => {
 			//16. Trae datos de medición
 
 			getdatameasure: (urlstring, assigndata) => {
-				console.log(JSON.parse(assigndata));
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							datameasure: data
+						});
+						console.log(data);
+					})
+					.catch(error => {
+						console.log(error);
+					});
 			}
 		}
 	};

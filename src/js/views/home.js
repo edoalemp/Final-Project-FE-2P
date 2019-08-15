@@ -147,7 +147,12 @@ export class Home extends React.Component {
 												</tr>
 												<tr>
 													<td colSpan="8" className="w-100" scope="col">
-														<div className="graphdiv" />
+														{store.datameasure.data}
+														<div className="graphdiv">
+															{store.datameasure.data} {store.datameasure.station_id}{" "}
+															{store.datameasure.measure_id}{" "}
+															{store.datameasure.measure_id}
+														</div>
 													</td>
 												</tr>
 												<tr>
