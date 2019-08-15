@@ -639,7 +639,9 @@ const getState = ({ getStore, setStore }) => {
 
 			//16. Trae datos de medición
 
-			getdatameasure: urlstring => {}
+			getdatameasure: (urlstring, assigndata) => {
+				console.log(JSON.parse(assigndata));
+			}
 		}
 	};
 };

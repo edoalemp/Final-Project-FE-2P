@@ -22,7 +22,6 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			console.log("XX");
 			this.state.actions.getstations(
 				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations"
 			);
