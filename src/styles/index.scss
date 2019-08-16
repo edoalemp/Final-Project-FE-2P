@@ -3,6 +3,12 @@
 */
 
 #scrolldiv { position: relative }
+#containergraph {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
 #list {border-width:2px !important}
 .w-10 {width: 10%}
 .w-20 {width: 20%}
@@ -10,8 +16,9 @@
 .w-40 {width: 40%}
 .w-33 {width: 33.33%}
 .table th {text-align: center}
-.table td {padding:0;
-            vertical-align:middle;
-            padding-left:10px}
+.table td {
+    padding:0;
+    vertical-align:middle;
+    padding-left:10px}
 .graphdiv {height:300px}
 .btn {padding: 6px}
