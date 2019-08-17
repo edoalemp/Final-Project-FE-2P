@@ -660,6 +660,116 @@ const getState = ({ getStore, setStore }) => {
 					.catch(error => {
 						console.log(error);
 					});
+			},
+
+			//17. Llena estaciones
+
+			fillstations: urlstring => {
+				fetch(urlstring, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						console.log(resp.status);
+
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									stations: data
+								});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			//18. Llena medidas
+
+			fillmeasures: urlstring => {
+				fetch(urlstring, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						console.log(resp.status);
+
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									measures: data
+								});
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			// llena con asignaciones de medidas
+
+			fillassignedmeasures: urlstring => {
+				fetch(urlstring, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						console.log(resp.status);
+
+						fetch("https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures", {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									assignedmeasures: data
+								});
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+					})
+					.catch(error => {
+						console.log(error);
+					});
 			}
 		}
 	};
