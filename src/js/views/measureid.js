@@ -170,6 +170,17 @@ export class MeasureId extends React.Component {
 												</div>
 											</div>
 										</div>
+										<Link
+											to="#"
+											role="button"
+											className="btn btn-primary w-100"
+											onClick={() =>
+												actions.fillassignedmeasures(
+													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/fill"
+												)
+											}>
+											Llenar estaciones con variables
+										</Link>
 									</nav>
 								</div>
 							</div>
