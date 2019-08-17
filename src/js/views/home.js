@@ -96,7 +96,7 @@ export class Home extends React.Component {
 																	Escoger..
 																</option>
 																<option key="2" value="1" selected>
-																	Hora
+																	Dia
 																</option>
 																<option key="3" value="2">
 																	Semana
