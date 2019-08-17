@@ -67,7 +67,7 @@ export class Home extends React.Component {
 											});
 											var json = JSON.stringify(object);
 
-											actions.getdatameasure(
+											actions.getassignedmeasuredata(
 												"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
 													object.station_id +
 													"/" +
