@@ -64,13 +64,13 @@ export default class LineGraph extends Component {
 
 	render() {
 		return (
-			<div className="chart-container" id="containergraph">
+			<div className="chart-container" id="containerchart">
 				<Line
 					id="chart"
 					data={this.state.data}
 					options={{
 						responsive: true,
-						maintainAspectRatio: true
+						maintainAspectRatio: false
 					}}
 				/>
 			</div>
