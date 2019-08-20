@@ -24,7 +24,7 @@ export class Stations extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.getonestation(
-														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/" +
 															store.stations[stationi].id,
 														store.stations[stationi].id
 													)
@@ -37,7 +37,7 @@ export class Stations extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.deletestation(
-														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/" +
 															store.stations[stationi].id,
 														store.stations[stationi].id
 													)
@@ -50,7 +50,7 @@ export class Stations extends React.Component {
 												className="btn btn-primary w-100 py-1"
 												onClick={() =>
 													actions.getonestation(
-														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+														"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/" +
 															store.stations[stationi].id,
 														store.stations[stationi].id
 													)
@@ -84,7 +84,7 @@ export class Stations extends React.Component {
 																	});
 																	var json = JSON.stringify(object);
 																	actions.editstation(
-																		"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/" +
+																		"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/" +
 																			store.onestation.id,
 																		json
 																	);
@@ -212,7 +212,7 @@ export class Stations extends React.Component {
 																var json = JSON.stringify(object);
 
 																actions.addstation(
-																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations",
+																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations",
 																	json
 																);
 															}}>
@@ -324,7 +324,7 @@ export class Stations extends React.Component {
 											className="btn btn-primary w-100"
 											onClick={() =>
 												actions.fillstations(
-													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/fill"
+													"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-eu0.gitpod.io/stations/fill"
 												)
 											}>
 											Llenar estaciones
