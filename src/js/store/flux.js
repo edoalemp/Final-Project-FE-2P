@@ -641,7 +641,7 @@ const getState = ({ getStore, setStore }) => {
 
 			//16. Trae datos de medición
 
-			getassignedmeasuredata: (urlstring, assigndata) => {
+			getassignedmeasuredata: urlstring => {
 				fetch(urlstring, {
 					method: "GET",
 					headers: {
