@@ -77,33 +77,44 @@ export class Home extends React.Component {
 										<table className="table table-bordered mb-0">
 											<tbody>
 												<tr>
-													<td colSpan="2" className="p-0" scope="col">
-														<div className="input-group">
+													<td colSpan="1" className="p-0" scope="col">
+														<div className="input-group mb-0">
 															<div className="input-group-prepend">
-																<label
+																<span
 																	className="input-group-text"
-																	htmlFor="time_interval">
-																	Intervalo
-																</label>
+																	htmlFor="date_from"
+																	id="basic-addon1">
+																	Desde
+																</span>
 															</div>
-															<select
-																className="custom-select"
-																id="time_interval"
-																defaultValue="1"
-																name="time_interval">
-																<option key="1" value="0">
-																	Escoger..
-																</option>
-																<option key="2" value="1" selected>
-																	Dia
-																</option>
-																<option key="3" value="2">
-																	Semana
-																</option>
-																<option key="4" value="3">
-																	Mes
-																</option>
-															</select>
+															<input
+																type="text"
+																className="form-control"
+																name="date_from"
+																placeholder="YYYYMMDDhhmmss"
+																aria-label="YYYYMMDDhhmmss"
+																aria-describedby="basic-addon1"
+															/>
+														</div>
+													</td>
+													<td colSpan="1" className="p-0" scope="col">
+														<div className="input-group mb-0">
+															<div className="input-group-prepend">
+																<span
+																	className="input-group-text"
+																	htmlFor="date_to"
+																	id="basic-addon1">
+																	Hasta
+																</span>
+															</div>
+															<input
+																type="text"
+																className="form-control"
+																name="date_to"
+																placeholder="YYYYMMDDhhmmss"
+																aria-label="YYYYMMDDhhmmss"
+																aria-describedby="basic-addon1"
+															/>
 														</div>
 													</td>
 													<td colSpan="2" className="p-0" scope="col">
