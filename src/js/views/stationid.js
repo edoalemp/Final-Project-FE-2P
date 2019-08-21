@@ -82,7 +82,7 @@ export class StationId extends React.Component {
 								if (store.assignedmeasuresof[i].measure_id == store.measures[j].id) {
 									arrayhtml.push(
 										<tr key={i}>
-											<td className="py-1">{store.measures[j].id}</td>
+											<td className="py-1">{store.assignedmeasuresof[i].id}</td>
 											<td className="py-1">{store.measures[j].name}</td>
 											<td className="py-1">xx</td>
 											<td className="py-1">{store.measures[j].unit}</td>
@@ -230,7 +230,7 @@ export class StationId extends React.Component {
 										<thead>
 											<tr>
 												<th className="w-10 py-1" scope="col">
-													#id
+													#a_id
 												</th>
 												<th className="w-30 py-1" scope="col">
 													Variable

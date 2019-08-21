@@ -344,7 +344,7 @@ export class Stations extends React.Component {
 										<thead>
 											<tr>
 												<th className="w-10 py-1" scope="col">
-													#id
+													#s_id
 												</th>
 												<th className="w-30 py-1" scope="col">
 													Variable

@@ -59,8 +59,17 @@ export class MeasureId extends React.Component {
 													<Link
 														to="/home"
 														role="button"
-														className="btn btn-primary w-100 py-1">
-														Detalle
+														className="btn btn-primary w-100 py-1"
+														onClick={() =>
+															actions.getassignedmeasuredata(
+																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
+																	store.stations[j].id +
+																	"/" +
+																	store.assignedmeasuresof[i].measure_id +
+																	"/20181230230000/20181231230000"
+															)
+														}>
+														Mostrar
 													</Link>
 													<Link
 														to="#"

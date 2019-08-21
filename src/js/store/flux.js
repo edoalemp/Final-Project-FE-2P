@@ -565,9 +565,16 @@ const getState = ({ getStore, setStore }) => {
 									break;
 								}
 							}
+							for (let i = 0; i <= tempstore.assignedmeasures.length - 1; i++) {
+								if (tempstore.assignedmeasures[i].measure_id === assignedmeasuresid) {
+									tempstore.assignedmeasures.splice(i, 1);
+									break;
+								}
+							}
 						}
 						setStore({
-							assignedmeasuresof: tempstore.assignedmeasuresof
+							assignedmeasuresof: tempstore.assignedmeasuresof,
+							assignedmeasures: tempstore.assignedmeasures
 						});
 					})
 

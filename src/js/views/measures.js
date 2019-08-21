@@ -257,13 +257,13 @@ export class Measures extends React.Component {
 									<nav
 										id="navbarint"
 										className="navbar navbar-light bg-light justify-content-md-center border">
-										<h4>Lista de variables del sistema</h4>
+										<h4>Variables medidas</h4>
 									</nav>
 									<table className="table table-bordered mb-0">
 										<thead>
 											<tr>
 												<th className="w-10 py-1" scope="col">
-													#id
+													#m_id
 												</th>
 												<th className="w-50 py-1" scope="col">
 													Variable

@@ -29,15 +29,13 @@ const injectContext = PassedComponent => {
 				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures"
 			);
 			this.state.actions.getonestation(
-				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/1"
+				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/stations/2"
 			);
 			this.state.actions.getonemeasure(
 				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/1"
 			);
 			this.state.actions.getassignedmeasuredata(
-				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/1/1/20181230230000/20181231230000",
-				1,
-				1
+				"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/2/1/20181230230000/20181231230000"
 			);
 		}
 
