@@ -54,7 +54,10 @@ export class Home extends React.Component {
 									<nav
 										id="navbarint"
 										className="navbar navbar-light bg-light justify-content-md-center border">
-										<h4>Gráfico de medición de variable en la estación</h4>
+										<h4>
+											Gráfico de medición de {store.onemeasure.name} ({store.onemeasure.symbol})
+											en {store.onestation.name}
+										</h4>
 									</nav>
 									<form
 										onSubmit={event => {

@@ -94,7 +94,16 @@ export class StationId extends React.Component {
 													<Link
 														to="/medicion"
 														role="button"
-														className="btn btn-primary w-100 py-1">
+														className="btn btn-primary w-100 py-1"
+														onClick={() =>
+															actions.getassignedmeasuredata(
+																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
+																	store.onestation.id +
+																	"/" +
+																	store.assignedmeasuresof[i].measure_id +
+																	"/20181230230000/20181231230000"
+															)
+														}>
 														Mostrar
 													</Link>
 													<Link
@@ -105,7 +114,7 @@ export class StationId extends React.Component {
 															actions.deletemeasurefrom(
 																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
 																	store.assignedmeasuresof[i].id,
-																store.assignedmeasuresof[i].id
+																store.assignedmeasuresof[i].measure_id
 															)
 														}>
 														Eliminar

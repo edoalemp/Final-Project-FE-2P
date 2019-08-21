@@ -1,6 +1,8 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			graphparam: [0, 0, 0],
+
 			stations: [],
 			stationswithmeasure: [],
 			onestation: {},
@@ -330,7 +332,7 @@ const getState = ({ getStore, setStore }) => {
 
 			//9. Borra un tipo de medida (OK!)
 
-			deletemeasure: (urlstring, measureid) => {
+			deletemeasure: urlstring => {
 				let tempstore = getStore();
 
 				fetch(urlstring, {
@@ -558,7 +560,7 @@ const getState = ({ getStore, setStore }) => {
 
 						if (resp.status === 200) {
 							for (let i = 0; i <= tempstore.assignedmeasuresof.length - 1; i++) {
-								if (tempstore.assignedmeasuresof[i].id === assignedmeasuresid) {
+								if (tempstore.assignedmeasuresof[i].measure_id === assignedmeasuresid) {
 									tempstore.assignedmeasuresof.splice(i, 1);
 									break;
 								}
