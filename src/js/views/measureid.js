@@ -63,7 +63,7 @@ export class MeasureId extends React.Component {
 														onClick={() =>
 															actions.getassignedmeasuredata(
 																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
-																	store.stations[j].id +
+																	store.assignedmeasuresof[i].measure_id +
 																	"/" +
 																	store.assignedmeasuresof[i].measure_id +
 																	"/20181230230000/20181231230000"
@@ -79,7 +79,7 @@ export class MeasureId extends React.Component {
 															actions.deletemeasurefrom(
 																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
 																	store.assignedmeasuresof[i].id,
-																store.assignedmeasuresof[i].id
+																store.assignedmeasuresof[i].measure_id
 															)
 														}>
 														Eliminar
@@ -205,7 +205,7 @@ export class MeasureId extends React.Component {
 										<thead>
 											<tr>
 												<th className="w-10 py-1" scope="col">
-													#id
+													#m_id
 												</th>
 												<th className="w-40 py-1" scope="col">
 													Nombre
