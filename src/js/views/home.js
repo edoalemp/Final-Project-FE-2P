@@ -78,9 +78,7 @@ export class Home extends React.Component {
 													"/" +
 													object.date_from +
 													"/" +
-													object.date_to,
-												object.station_id,
-												object.measure_id
+													object.date_to
 											);
 										}}>
 										<table className="table table-bordered mb-0">
