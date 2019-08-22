@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			graphparam: [0, 0, 0],
+			lastdata: 0,
 
 			stations: [],
 			stationswithmeasure: [],
@@ -775,6 +775,27 @@ const getState = ({ getStore, setStore }) => {
 							.catch(error => {
 								console.log(error);
 							});
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			getassignedmeasurelastdata: urlstring => {
+				fetch(urlstring, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({
+							lastdata: data
+						});
+						console.log(data);
 					})
 					.catch(error => {
 						console.log(error);

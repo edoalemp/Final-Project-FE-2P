@@ -9,6 +9,7 @@ export class StationId extends React.Component {
 				{({ store, actions }) => {
 					let stationframe;
 					let arrayhtml = [];
+
 					stationframe = (
 						<div className="row justify-content-md-center">
 							<div id="list" className="col-md-12 col-center mt-3 p-0 border rounded">
@@ -84,7 +85,7 @@ export class StationId extends React.Component {
 										<tr key={i}>
 											<td className="py-1">{store.assignedmeasuresof[i].id}</td>
 											<td className="py-1">{store.measures[j].name}</td>
-											<td className="py-1">xx</td>
+											<td className="py-1">10</td>
 											<td className="py-1">{store.measures[j].unit}</td>
 											<td className="p-0">
 												<div
