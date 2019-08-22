@@ -102,7 +102,9 @@ export class StationId extends React.Component {
 																	store.onestation.id +
 																	"/" +
 																	store.assignedmeasuresof[i].measure_id +
-																	"/20181230230000/20181231230000"
+																	"/20181230230000/20181231230000",
+																store.onestation.id,
+																store.assignedmeasuresof[i].measure_id
 															)
 														}>
 														Mostrar

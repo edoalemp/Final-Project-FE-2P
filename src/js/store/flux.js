@@ -650,7 +650,7 @@ const getState = ({ getStore, setStore }) => {
 
 			//16. Trae datos de medición
 
-			getassignedmeasuredata: urlstring => {
+			getassignedmeasuredata: (urlstring, stationid, mesureid) => {
 				fetch(urlstring, {
 					method: "GET",
 					headers: {
@@ -664,6 +664,32 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							datameasure: data
 						});
+
+						fetch(
+							"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/measures/" +
+								mesureid.toString(),
+							{
+								method: "GET",
+								headers: {
+									"Content-Type": "application/json"
+								}
+							}
+						)
+							.then(resp => {
+								return resp.json();
+							})
+							.then(data => {
+								setStore({
+									onemeasure: data
+								});
+								console.log("xxx");
+
+								console.log(data);
+							})
+							.catch(error => {
+								console.log(error);
+							});
+
 						console.log(data);
 					})
 					.catch(error => {
