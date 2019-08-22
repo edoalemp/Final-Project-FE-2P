@@ -66,7 +66,9 @@ export class MeasureId extends React.Component {
 																	store.assignedmeasuresof[i].station_id +
 																	"/" +
 																	store.assignedmeasuresof[i].measure_id +
-																	"/20181230230000/20181231230000"
+																	"/20181230230000/20181231230000",
+																store.assignedmeasuresof[i].station_id,
+																store.assignedmeasuresof[i].measure_id
 															)
 														}>
 														Mostrar
