@@ -171,7 +171,7 @@ export class Home extends React.Component {
 														</div>
 													</td>
 												</tr>
-												<tr>
+												<tr hidden>
 													<th className="" scope="col">
 														Valor máximo
 													</th>
