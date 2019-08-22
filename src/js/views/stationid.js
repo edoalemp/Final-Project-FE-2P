@@ -81,11 +81,17 @@ export class StationId extends React.Component {
 						for (let i = 0; i <= store.assignedmeasuresof.length - 1; i++) {
 							for (let j = 0; j <= store.measures.length - 1; j++) {
 								if (store.assignedmeasuresof[i].measure_id == store.measures[j].id) {
+									let last = 0;
+									for (let k = 0; k <= store.lastdata.length - 1; k++) {
+										if (store.lastdata[k].measure_id == store.assignedmeasuresof[i].measure_id) {
+											last = store.lastdata[k].data_value;
+										}
+									}
 									arrayhtml.push(
 										<tr key={i}>
 											<td className="py-1">{store.assignedmeasuresof[i].id}</td>
 											<td className="py-1">{store.measures[j].name}</td>
-											<td className="py-1">10</td>
+											<td className="py-1">{last}</td>
 											<td className="py-1">{store.measures[j].unit}</td>
 											<td className="p-0">
 												<div

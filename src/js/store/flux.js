@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			lastdata: 0,
+			lastdata: [],
 
 			stations: [],
 			stationswithmeasure: [],
@@ -212,6 +212,30 @@ const getState = ({ getStore, setStore }) => {
 								setStore({
 									assignedmeasuresof: data
 								});
+
+								fetch(
+									"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/last",
+									{
+										method: "GET",
+										headers: {
+											"Content-Type": "application/json"
+										}
+									}
+								)
+									.then(resp => {
+										return resp.json();
+									})
+									.then(data => {
+										setStore({
+											lastdata: data
+										});
+
+										console.log(data);
+									})
+									.catch(error => {
+										console.log(error);
+									});
+
 								console.log(data);
 							})
 							.catch(error => {
