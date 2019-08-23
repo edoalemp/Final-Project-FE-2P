@@ -71,7 +71,7 @@ export class Home extends React.Component {
 											/*var json = JSON.stringify(object);*/
 
 											actions.getassignedmeasuredata(
-												"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
+												"https://3000-b75744a2-23d9-4d26-b7ef-efa40bebf4e2.ws-us0.gitpod.io/assignedmeasures/" +
 													object.station_id +
 													"/" +
 													object.measure_id +

@@ -104,7 +104,7 @@ export class StationId extends React.Component {
 														className="btn btn-primary w-100 py-1"
 														onClick={() =>
 															actions.getassignedmeasuredata(
-																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
+																"https://3000-b75744a2-23d9-4d26-b7ef-efa40bebf4e2.ws-us0.gitpod.io/assignedmeasures/" +
 																	store.onestation.id +
 																	"/" +
 																	store.assignedmeasuresof[i].measure_id +
@@ -121,7 +121,7 @@ export class StationId extends React.Component {
 														className="btn btn-primary w-100 py-1"
 														onClick={() =>
 															actions.deletemeasurefrom(
-																"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures/" +
+																"https://3000-b75744a2-23d9-4d26-b7ef-efa40bebf4e2.ws-us0.gitpod.io/assignedmeasures/" +
 																	store.assignedmeasuresof[i].id,
 																store.assignedmeasuresof[i].measure_id
 															)
@@ -176,7 +176,7 @@ export class StationId extends React.Component {
 																var json = JSON.stringify(object);
 
 																actions.addstationto(
-																	"https://3000-f0fe1d67-8c5b-4489-91c9-a76f335e26e0.ws-us0.gitpod.io/assignedmeasures",
+																	"https://3000-b75744a2-23d9-4d26-b7ef-efa40bebf4e2.ws-us0.gitpod.io/assignedmeasures",
 																	json
 																);
 															}}>
