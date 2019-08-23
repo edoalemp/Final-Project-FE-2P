@@ -83,7 +83,7 @@ export class StationId extends React.Component {
 								if (store.assignedmeasuresof[i].measure_id == store.measures[j].id) {
 									let last = 0;
 									for (let k = 0; k <= store.lastdata.length - 1; k++) {
-										if (store.lastdata[k].measure_id == store.assignedmeasuresof[i].measure_id) {
+										if (store.lastdata[k].id == store.assignedmeasuresof[i].id) {
 											last = store.lastdata[k].data_value;
 										}
 									}
