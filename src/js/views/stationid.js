@@ -23,7 +23,7 @@ export class StationId extends React.Component {
 									<tbody>
 										<tr>
 											<th className="w-20 py-1" scope="col">
-												id#
+												s_id#
 											</th>
 											<td colSpan="2" className="w-80 py-1" scope="col">
 												{store.onestation.id}

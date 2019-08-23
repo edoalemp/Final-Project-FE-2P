@@ -16,7 +16,7 @@ export class MeasureId extends React.Component {
 									<tbody>
 										<tr>
 											<th className="w-20 py-1" scope="col">
-												id#
+												m_id#
 											</th>
 											<td className="w-80 py-1" scope="col">
 												{store.measuretype.id}
@@ -207,7 +207,7 @@ export class MeasureId extends React.Component {
 										<thead>
 											<tr>
 												<th className="w-10 py-1" scope="col">
-													#m_id
+													#s_id
 												</th>
 												<th className="w-40 py-1" scope="col">
 													Nombre
